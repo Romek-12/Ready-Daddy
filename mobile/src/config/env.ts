@@ -11,9 +11,11 @@
 
 // ---------------------------------------------------------------------------
 // Supabase credentials – uzupełnij przed pierwszym uruchomieniem
+// Ustaw zmienne środowiskowe EXPO_PUBLIC_SUPABASE_URL i EXPO_PUBLIC_SUPABASE_ANON_KEY
+// lub skopiuj .env.example do .env.local i uzupełnij wartości
 // ---------------------------------------------------------------------------
-export const SUPABASE_URL = 'https://dosqslbiauzznrtnkpvx.supabase.co';
-export const SUPABASE_ANON_KEY = 'sb_secret_xUBax8OmtZ49h0K_qlficA_MDXc_zi6';
+export const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL || '';
+export const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || '';
 
 // ---------------------------------------------------------------------------
 // App-wide config
