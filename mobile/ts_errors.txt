@@ -1,0 +1,5 @@
+﻿src/components/ShoppingList.tsx(203,9): error TS2451: Cannot redeclare block-scoped variable 'TRIMESTERS'.
+src/components/ShoppingList.tsx(204,9): error TS2451: Cannot redeclare block-scoped variable 'TRIMESTERS'.
+src/screens/DadModuleScreen.tsx(178,40): error TS2339: Property 'statItem' does not exist on type '{ num: string; desc: string; }'.
+src/screens/DadModuleScreen.tsx(179,34): error TS2339: Property 'statNum' does not exist on type '{ num: string; desc: string; }'.
+src/screens/DadModuleScreen.tsx(180,34): error TS2339: Property 'statDesc' does not exist on type '{ num: string; desc: string; }'.

@@ -1,0 +1,137 @@
+[
+  {
+    "id": 154,
+    "trimester": 3,
+    "name": "Fotelik samochodowy 0–13 kg",
+    "category": "Niezbędne",
+    "is_essential": 1,
+    "estimated_cost_pln": 400,
+    "notes": "Certyfikat ECE R44 lub R129. Zamontowany PRZED terminem"
+  },
+  {
+    "id": 155,
+    "trimester": 3,
+    "name": "Łóżeczko + materac twardy",
+    "category": "Niezbędne",
+    "is_essential": 1,
+    "estimated_cost_pln": 500,
+    "notes": "Materac dopasowany do łóżeczka — szczelina max 2 cm"
+  },
+  {
+    "id": 156,
+    "trimester": 3,
+    "name": "Śpiochy / body x 5",
+    "category": "Niezbędne",
+    "is_essential": 1,
+    "estimated_cost_pln": 150,
+    "notes": "Rozmiar 56–62, nie 50 — rosną szybko"
+  },
+  {
+    "id": 157,
+    "trimester": 3,
+    "name": "Czapeczki x 3",
+    "category": "Niezbędne",
+    "is_essential": 1,
+    "estimated_cost_pln": 30,
+    "notes": "Głównie na pierwsze tygodnie"
+  },
+  {
+    "id": 158,
+    "trimester": 3,
+    "name": "Pieluszki noworodkowe",
+    "category": "Niezbędne",
+    "is_essential": 1,
+    "estimated_cost_pln": 50,
+    "notes": "1 opakowanie — może inny rozmiar pasować lepiej"
+  },
+  {
+    "id": 159,
+    "trimester": 3,
+    "name": "Mokre chusteczki",
+    "category": "Niezbędne",
+    "is_essential": 1,
+    "estimated_cost_pln": 20,
+    "notes": "Bez alkoholu, hipoalergiczne"
+  },
+  {
+    "id": 166,
+    "trimester": 3,
+    "name": "Huśtawka / leżaczek",
+    "category": "Opcjonalne",
+    "is_essential": 0,
+    "estimated_cost_pln": 150,
+    "notes": "Przydatna jeśli masz wolne ręce"
+  },
+  {
+    "id": 167,
+    "trimester": 3,
+    "name": "Przewijak",
+    "category": "Opcjonalne",
+    "is_essential": 0,
+    "estimated_cost_pln": 100,
+    "notes": "Mata przewijana na komodzie = tańsza opcja"
+  },
+  {
+    "id": 168,
+    "trimester": 3,
+    "name": "Sterylizator",
+    "category": "Opcjonalne",
+    "is_essential": 0,
+    "estimated_cost_pln": 120,
+    "notes": "Niezbędny przy butelkach; przy piersi mniej konieczny"
+  },
+  {
+    "id": 160,
+    "trimester": 3,
+    "name": "Wózek spacerowo-gondola",
+    "category": "Przydatne",
+    "is_essential": 0,
+    "estimated_cost_pln": 1500,
+    "notes": "Sprawdź czy gondola jest homologowana do snu"
+  },
+  {
+    "id": 161,
+    "trimester": 3,
+    "name": "Nosidełko ergonomiczne",
+    "category": "Przydatne",
+    "is_essential": 0,
+    "estimated_cost_pln": 250,
+    "notes": "M-pozycja kolan wyżej niż biodra"
+  },
+  {
+    "id": 162,
+    "trimester": 3,
+    "name": "Elektryczny laktator",
+    "category": "Przydatne",
+    "is_essential": 0,
+    "estimated_cost_pln": 300,
+    "notes": "Jeśli mama planuje karmienie piersią"
+  },
+  {
+    "id": 163,
+    "trimester": 3,
+    "name": "Termometr + aspirator",
+    "category": "Przydatne",
+    "is_essential": 0,
+    "estimated_cost_pln": 100,
+    "notes": "Absolutna konieczność przy infekcjach"
+  },
+  {
+    "id": 164,
+    "trimester": 3,
+    "name": "Baby monitor",
+    "category": "Przydatne",
+    "is_essential": 0,
+    "estimated_cost_pln": 200,
+    "notes": "Opcjonalnie — zależy od układu mieszkania"
+  },
+  {
+    "id": 165,
+    "trimester": 3,
+    "name": "Kąpielka + termometr",
+    "category": "Przydatne",
+    "is_essential": 0,
+    "estimated_cost_pln": 80,
+    "notes": "Temperatura wody: 37°C"
+  }
+]

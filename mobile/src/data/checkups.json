@@ -1,0 +1,83 @@
+[
+  {
+    "id": 100,
+    "week_number": 8,
+    "name": "Baseline i badania ogólne (Tyg. 8–10)",
+    "description": "Morfologia, mocz, glukoza, TSH, grupa krwi, HIV, HBs, kiła.",
+    "what_it_means": "Sprawdzenie bazowego stanu zdrowia mamy – czy nie ma ukrytych niedoborów lub infekcji.",
+    "questions_to_ask": "Jak wyglądają wyniki badań? Co oznacza dla naszego dziecka?",
+    "is_mandatory": 1
+  },
+  {
+    "id": 101,
+    "week_number": 12,
+    "name": "USG genetyczne + PAPP-A (Tyg. 11–13)",
+    "description": "Pomiar NT (przezierność karkowa) + PAPP-A + wolne β-hCG.",
+    "what_it_means": "Ocena ryzyka najczęstszych trisomii: 21, 18, 13.",
+    "questions_to_ask": "Jakie są sygnały alarmowe na które musimy w ogóle podczas ciąży uważać?",
+    "is_mandatory": 1
+  },
+  {
+    "id": 102,
+    "week_number": 16,
+    "name": "Amniopunkcja (Tyg. 15-20, jeśli wskazana)",
+    "description": "Badanie inwazyjne lub np. wolnego płodowego DNA z krwi (NIPT).",
+    "what_it_means": "Diagnostyka chromosomowa dająca ogromną pewność genetyczną płodu.",
+    "questions_to_ask": "Czy wyniki są w normie? Czy potrzebne są dalsze konsultacje pod kątem genetyku?",
+    "is_mandatory": 0
+  },
+  {
+    "id": 103,
+    "week_number": 20,
+    "name": "USG morfologiczne (Tyg. 18–22)",
+    "description": "USG połówkowe.",
+    "what_it_means": "Ocena budowy każdej ważnej anatomii u płodu – kluczowe badanie sprawdzające czy rosnę bez wad.",
+    "questions_to_ask": "Gdzie jest moje łożysko u mamy? Kiedy ustalać kolejne z cyklu?",
+    "is_mandatory": 1
+  },
+  {
+    "id": 104,
+    "week_number": 24,
+    "name": "Krzywa cukrowa OGTT (Tyg. 24–28)",
+    "description": "Diagnostyka cukrzycy ciążowej 75 g glukozy.",
+    "what_it_means": "Jeden z krytycznych testów – cukrzyca wyzwala wiele negatywnych lawin zdrowotnych.",
+    "questions_to_ask": "Co robimy jeśli wynik krzywej cukrowej OGTT wyjdzie nieprawidłowy?",
+    "is_mandatory": 1
+  },
+  {
+    "id": 105,
+    "week_number": 30,
+    "name": "USG wzrostowe (Tyg. 28–32)",
+    "description": "Monitoring i ocena ogólnego wzrastania, ilości samych wód płodowych, sprawności wymiany w łożysku.",
+    "what_it_means": "Upewnienie się że maluch nabiera stabilnie wagę na finalną prostą.",
+    "questions_to_ask": "Ile jest teraz płynu owodniowego? Czy dziecko rośnie proporcjonalnie w normach?",
+    "is_mandatory": 1
+  },
+  {
+    "id": 106,
+    "week_number": 35,
+    "name": "Badanie GBS (Tyg. 33–37)",
+    "description": "Paciorkowiec z grupy B z wymazu pochwy.",
+    "what_it_means": "By zadecydować czy antybiotyk podawany w chwili przed akcją jest przymusowy na ochronę dla rodzącego.",
+    "questions_to_ask": "Zlecone GBS? Kiedy mama będzie sprawdzana, jeśli wyjdzie pozytywny paciorkowiec co to zmienia?",
+    "is_mandatory": 1
+  },
+  {
+    "id": 107,
+    "week_number": 38,
+    "name": "USG Dopplera i KTG co pow. 1 tydzień",
+    "description": "Wizyty co 1-2 tygodnie dla KTG, sprawdzanie szyjki macicy ginekologicznie, monitoring serca tętna.",
+    "what_it_means": "Codzienny monitoring medyczny zabezpiecza przeciw nieprawidłowościom ukrytym jak spadek dróg podaży tlenu.",
+    "questions_to_ask": "Jak odróżnić skurcze ćwiczące Braxtona-Hicksa po KTG z prawdziwymi skurczami na IP?",
+    "is_mandatory": 1
+  },
+  {
+    "id": 108,
+    "week_number": 41,
+    "name": "Monitoring porodu po 41 tyg.",
+    "description": "Monitoring niemalże co drugi czy trzeci dzień.",
+    "what_it_means": "Łożysko przestaje działać w pełni poprawnie po terminie przedłużenia się dając stan niedotlenienia.",
+    "questions_to_ask": "Rozmowa ojca z lekarzem o opcjach na plan procedury przy przekroczeniu terminu, po co indukcja kiedy w szpitalu?",
+    "is_mandatory": 1
+  }
+]

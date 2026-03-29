@@ -1,0 +1,56 @@
+[
+  {
+    "id": 55,
+    "stage": 1,
+    "title": "Faza latentna (1–3 cm)",
+    "description": "Nieregularne skurcze, szyjka się otwiera.",
+    "partner_role": "Bądź przy niej, pomóż zliczyć skurcze.",
+    "duration_info": "Do momentu aż skurcze będą wg 5-1-1",
+    "emergency_notes": "Gdy nagłe odejście wód lub krwawienie i ból stały – natychmiast IP."
+  },
+  {
+    "id": 56,
+    "stage": 2,
+    "title": "Faza aktywna (4–7 cm)",
+    "description": "Silne, regularne skurcze porodowe narastające na sile.",
+    "partner_role": "Masuj plecy, oddychaj razem z nią, mów spokojnie. Pielęgnuj przestrzeń (światła).",
+    "duration_info": "Kilka godzin do kilkunastu",
+    "emergency_notes": "Alarm dla braku przerw lub krwotoku."
+  },
+  {
+    "id": 57,
+    "stage": 3,
+    "title": "Faza przejściowa (8–10 cm)",
+    "description": "Najintensywniejsza, ale krótka. Tu może odczuć kryzys bólowy.",
+    "partner_role": "Nie dawaj pustych rad. Trzymaj za rękę. Mów \"dajesz radę\". Nie zważaj na wyrzucany złość.",
+    "duration_info": "Najkrótsza w całości fazy 1.",
+    "emergency_notes": "Jeżeli rodząca traci oddech, przerywa krzyczenie, upewnijcie się o pomocy z położną."
+  },
+  {
+    "id": 58,
+    "stage": 4,
+    "title": "Faza parcia",
+    "description": "Mama pcha, by noworodek schodził niżej dnem miednicy.",
+    "partner_role": "Mów jej kiedy ma przeć jeśli poprosi — słuchaj poleceń położnej.",
+    "duration_info": "Godziny potrafią pędzić w minuty (15min-2h).",
+    "emergency_notes": ""
+  },
+  {
+    "id": 59,
+    "stage": 5,
+    "title": "Moje urodziny",
+    "description": "Wychodzę na naświetlenie sal porodowych.",
+    "partner_role": "Obetnij moją pępowinę jeśli chcesz — poinformuj lekarza i położną wcześniej.",
+    "duration_info": "To ta słynna minuta.",
+    "emergency_notes": ""
+  },
+  {
+    "id": 60,
+    "stage": 6,
+    "title": "Wydalenie łożyska",
+    "description": "Ostatnie kilka skurczów na oddzielenie i wydalenie popłodu.",
+    "partner_role": "Zajmij się mną — rób skin-to-skin jeśli mama zaszywana. Mówcie do mnie.",
+    "duration_info": "Około kilkanaście do pół godziny po urodzeniu.",
+    "emergency_notes": "Gwałtowny brak zatrzymania krwawienia u mamy rzuca tu na szale wyzwania izb."
+  }
+]

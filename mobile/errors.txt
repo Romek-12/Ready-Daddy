@@ -1,0 +1,33 @@
+src/components/Icon.tsx(2,55): error TS2307: Cannot find module '@expo/vector-icons' or its corresponding type declarations.
+src/components/Logo.tsx(2,30): error TS2307: Cannot find module 'react-native-svg' or its corresponding type declarations.
+src/config/env.ts(8,23): error TS2307: Cannot find module 'expo-constants' or its corresponding type declarations.
+src/context/ThemeContext.tsx(2,26): error TS2307: Cannot find module '@react-native-async-storage/async-storage' or its corresponding type declarations.
+src/context/ThemeContext.tsx(19,69): error TS2345: Argument of type 'ColorSchemeName | null | undefined' is not assignable to parameter of type 'ColorSchemeName | (() => ColorSchemeName)'.
+  Type 'undefined' is not assignable to type 'ColorSchemeName | (() => ColorSchemeName)'.
+src/context/ThemeContext.tsx(23,47): error TS7006: Parameter 'savedMode' implicitly has an 'any' type.
+src/navigation/AppNavigator.tsx(2,37): error TS2307: Cannot find module '@react-navigation/native' or its corresponding type declarations.
+src/navigation/AppNavigator.tsx(3,44): error TS2307: Cannot find module '@react-navigation/native-stack' or its corresponding type declarations.
+src/navigation/AppNavigator.tsx(4,42): error TS2307: Cannot find module '@react-navigation/bottom-tabs' or its corresponding type declarations.
+src/navigation/AppNavigator.tsx(6,34): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/navigation/AppNavigator.tsx(86,35): error TS7031: Binding element 'color' implicitly has an 'any' type.
+src/navigation/AppNavigator.tsx(86,42): error TS7031: Binding element 'focused' implicitly has an 'any' type.
+src/navigation/AppNavigator.tsx(92,35): error TS7031: Binding element 'color' implicitly has an 'any' type.
+src/navigation/AppNavigator.tsx(92,42): error TS7031: Binding element 'focused' implicitly has an 'any' type.
+src/navigation/AppNavigator.tsx(98,35): error TS7031: Binding element 'color' implicitly has an 'any' type.
+src/navigation/AppNavigator.tsx(98,42): error TS7031: Binding element 'focused' implicitly has an 'any' type.
+src/navigation/AppNavigator.tsx(104,35): error TS7031: Binding element 'color' implicitly has an 'any' type.
+src/navigation/AppNavigator.tsx(104,42): error TS7031: Binding element 'focused' implicitly has an 'any' type.
+src/screens/ActionCardsScreen.tsx(3,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/ActionCardsScreen.tsx(4,20): error TS2307: Cannot find module 'react-native-deck-swiper' or its corresponding type declarations.
+src/screens/CheckupsScreen.tsx(3,27): error TS2307: Cannot find module 'expo-calendar' or its corresponding type declarations.
+src/screens/CheckupsScreen.tsx(62,37): error TS7006: Parameter 'c' implicitly has an 'any' type.
+src/screens/CheckupsScreen.tsx(62,73): error TS7006: Parameter 'c' implicitly has an 'any' type.
+src/screens/DadModuleScreen.tsx(183,85): error TS2322: Type '{ name: string; size: number; color: string; style: { marginVertical: number; }; }' is not assignable to type 'IntrinsicAttributes & IconProps'.
+  Property 'style' does not exist on type 'IntrinsicAttributes & IconProps'.
+src/screens/FourthTrimesterScreen.tsx(97,22): error TS2339: Property 'warning_signs' does not exist on type 'FourthTrimesterWeek'.
+src/screens/FourthTrimesterScreen.tsx(100,54): error TS2339: Property 'warning_signs' does not exist on type 'FourthTrimesterWeek'.
+src/screens/LoginScreen.tsx(7,45): error TS2307: Cannot find module '@react-navigation/native-stack' or its corresponding type declarations.
+src/screens/RegisterScreen.tsx(8,45): error TS2307: Cannot find module '@react-navigation/native-stack' or its corresponding type declarations.
+src/screens/SettingsScreen.tsx(8,45): error TS2307: Cannot find module '@react-navigation/native-stack' or its corresponding type declarations.
+src/screens/WeekDetailScreen.tsx(6,45): error TS2307: Cannot find module '@react-navigation/native-stack' or its corresponding type declarations.
+src/services/api.ts(1,26): error TS2307: Cannot find module '@react-native-async-storage/async-storage' or its corresponding type declarations.

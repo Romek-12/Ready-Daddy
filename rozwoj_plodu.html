@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozwój Płodu – Karty Informacyjne</title>
+    <style>
+        :root {
+            --bg: #0A0E1A; --surface: #141928; --card: #1E2540; --text: #FFFFFF;
+            --text-sec: #8B95B5; --primary: #00D9A6; --accent: #FFB547; --danger: #FF5C5C;
+            --mom: #FF6B9D; --dad: #00C2E0; --border: rgba(255, 255, 255, 0.05);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        .container { display: flex; flex-direction: column; gap: 1.5rem; max-width: 1000px; margin: 0 auto; }
+        .card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .week-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: #000;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+        .fetus-info {
+            background: rgba(0, 217, 166, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .section {
+            background: var(--surface);
+            padding: 1.2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        .section.mom { border-top: 3px solid var(--mom); }
+        .section.dad { border-top: 3px solid var(--dad); }
+        h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #FFF;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mom h3 { color: var(--mom); }
+        .dad h3 { color: var(--dad); }
+        .stat {
+            font-size: 0.9rem;
+            color: var(--text-sec);
+            margin-bottom: 0.5rem;
+        }
+        .stat strong { color: #FFF; font-weight: 600; display: inline-block; width: 110px; }
+        .notification {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 181, 71, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--accent);
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            body { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Karty Rozwoju Płodu</h1>
+
+    <div class="container">
+
+        <!-- Tydzień 4 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 4 • Trymestr 1</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Ziarno maku (1 mm, 0 g)<br><br>
+                <em>"Tato, właśnie zagnieżdżam się w macicy! Formuje się ze mnie blastocysta."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Mama jeszcze o mnie nie wie. Może mieć delikatne plamienia implantacyjne.</div>
+                    <div class="stat"><strong>Emocje:</strong> Jej nastrój jest normalny, chociaż może mieć przeczucie.</div>
+                    <div class="stat"><strong>Hormony:</strong> Produkuję hormon hCG – to on za chwilę na teście pokaże dwie kreski!</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Jeśli planowaliście mnie, bądź obok. Nie naciskaj na test zbyt szybko, daj mi chwilę.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Pewnie jeszcze o mnie nie wiesz.</div>
+                    <div class="stat"><strong>Działanie:</strong> Przygotuj się psychicznie, tato – to będzie dla nas wielka przygoda.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 4. Tato, jestem wielkości ziarna maku i właśnie się zagnieżdżam."</div>
+        </div>
+
+        <!-- Tydzień 5 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 5 • Trymestr 1</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Ziarno sezamu (2 mm, 0 g)<br><br>
+                <em>"Moje serce zaczyna bić! Formuje się też moja cewa nerwowa."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> To przeze mnie mama ma pierwsze nudności. Jest też bardzo zmęczona.</div>
+                    <div class="stat"><strong>Emocje:</strong> Szok, radość, strach – mama czuje to wszystko naraz po pozytywnym teście.</div>
+                    <div class="stat"><strong>Hormony:</strong> Moje hCG podwaja się co 48 godzin. Progesteron gwałtownie rośnie.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Nie bagatelizuj jej zmęczenia. Przejmij teraz więcej obowiązków w domu.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Szok po zobaczeniu testu to normalna sprawa, tato.</div>
+                    <div class="stat"><strong>Działanie:</strong> Powiedz mamie, co czujesz. Nie musisz udawać twardziela, możemy się bać razem.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 5. Tato, moje serce właśnie zaczęło bić!"</div>
+        </div>
+
+        <!-- Tydzień 6 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 6 • Trymestr 1</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Ziarno soczewicy (4 mm, 0 g)<br><br>
+                <em>"Mam już zalążki rączek i nóżek. Moje serce bije 110 razy na minutę."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Niestety, nudności mamy się nasilają. Często biega do toalety i bolą ją piersi.</div>
+                    <div class="stat"><strong>Emocje:</strong> Jej nastroje szaleją. Może płakać zupełnie bez powodu, ale to przez układ hormonalny.</div>
+                    <div class="stat"><strong>Hormony:</strong> Progesteron rozluźnia mięśnie gładkie – dlatego mamie tak niedobrze.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Postaw jej rano krakersy i wodę przy łóżku. Zrezygnuj na chwilę z mocnych perfum.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Możesz czuć się trochę bezradny, widząc jej nudności.</div>
+                    <div class="stat"><strong>Działanie:</strong> Twoje drobne gesty są teraz najważniejsze. Kupuj jej ulubione przekąski.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 6. Mamie może być ciężko przez nudności. Pomóż jej!"</div>
+        </div>
+
+        <!-- Tydzień 8 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 8 • Trymestr 1</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Malina (16 mm, 1 g)<br><br>
+                <em>"Wszystkie moje główne organy stają na nogi. Mam już palce u rąk i nóg!"</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Nudności są teraz najgorsze. Mama jest ekstremalnie zmęczona i może spać 12 godzin na dobę.</div>
+                    <div class="stat"><strong>Emocje:</strong> Mama bardzo boi się o moje zdrowie i potrzebuje Twojego uspokojenia.</div>
+                    <div class="stat"><strong>Hormony:</strong> Jej organizm w pocie czoła buduje moje łożysko, progesteron jest na maksimum.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Nie mów jej, że wygląda na zmęczoną. Zamiast tego zrób obiad i daj jej odpocząć.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Możesz czuć się trochę odstawiony na boczny tor, to normalne, oboje jesteśmy teraz priorytetem mamy.</div>
+                    <div class="stat"><strong>Działanie:</strong> Połóżcie się razem na kanapie, nie musicie nic robić. Bądź z nią.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 8. Tato, buduję się w pocie czoła, więc mama może spać 12h!"</div>
+        </div>
+
+        <!-- Tydzień 10 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 10 • Trymestr 1</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Truskawka (31 mm, 4 g)<br><br>
+                <em>"Oficjalnie jestem płodem, nie zarodkiem! Mam już wszystko na swoim miejscu."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Nudności powoli zaczynają odpuszczać. Mój dom w brzuchu jeszcze słabo widać na zewnątrz.</div>
+                    <div class="stat"><strong>Emocje:</strong> Mama czuje ulgę, gdy słyszy moje serce na USG.</div>
+                    <div class="stat"><strong>Hormony:</strong> Mój hormon hCG przestaje już tak szaleć, ale progesteron trzyma mnie mocno.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Zjedz z mamą pierwsze śniadanie, to pomaga jej poczuć się rano lepiej.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Pewnie ciągle ciężko Ci uwierzyć, że tu jestem. To wydaje się nierealne.</div>
+                    <div class="stat"><strong>Działanie:</strong> Popatrzcie razem na moje zdjęcie z USG. To nasz pierwszy wspólny portret!</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 10. Oficjalnie jestem płodem! Mam już wszystkie organy."</div>
+        </div>
+
+        <!-- Tydzień 12 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 12 • Trymestr 1</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Limonka (54 mm, 14 g)<br><br>
+                <em>"Ćwiczę moje odruchy i zaczynam się ruszać, chociaż mama jeszcze mnie nie czuje."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Uff, kończymy pierwszy trymestr! Energia mamy powoli wraca.</div>
+                    <div class="stat"><strong>Emocje:</strong> Ogromna ulga. To jest ten moment, w którym możecie pochwalić się mną światu.</div>
+                    <div class="stat"><strong>Hormony:</strong> Zmniejsza się ryzyko bym z Wami nie został. Mam tu już stabilny dom.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Wesprzyj mamę w decyzji, jak chce ogłosić moje nadejście reszcie rodziny.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Moje istnienie powoli staje się dla Ciebie dużo bardziej realne.</div>
+                    <div class="stat"><strong>Działanie:</strong> Zaplanujcie z mamą, jak powiecie dziadkom. To Wasza wielka chwila.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 12. Kończymy pierwszy trymestr! Jesteśmy coraz bezpieczniejsi."</div>
+        </div>
+
+        <!-- Tydzień 14 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 14 • Trymestr 2</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Cytryna (87 mm, 43 g)<br><br>
+                <em>"Umiem już stroić miny! Mam też delikatny meszek na sobie (to się nazywa lanugo)."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Mama odzyskuje siły! Zaczynamy złoty okres naszej przygody.</div>
+                    <div class="stat"><strong>Emocje:</strong> Jej nastrój się wyrównał. Czuje się znacznie pewniej.</div>
+                    <div class="stat"><strong>Hormony:</strong> Dzięki estrogenom rosną mamie piękne włosy i świetnie wygląda.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Zabieraj mamę na randki! Korzystajcie, że czuje się teraz tak dobrze.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Pewnie zaczynasz liczyć kasę i myśleć o finansach. Jesteś odpowiedzialny, tato.</div>
+                    <div class="stat"><strong>Działanie:</strong> Uszykuj prosty plan budżetu na moje przybycie, to uspokoi Was oboje.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 14. Zaczynamy drugi trymestr! Mama czuje się znacznie lepiej."</div>
+        </div>
+
+        <!-- Tydzień 16 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 16 • Trymestr 2</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Awokado (120 mm, 100 g)<br><br>
+                <em>"Tato, zaczynam słyszeć! Słyszę głos mamy i muzykę, a niedługo usłyszę też Ciebie."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Mój domek (brzuch mamy) zaczyna być widoczny. Zaraz poczuje moje pierwsze ruchy!</div>
+                    <div class="stat"><strong>Emocje:</strong> Mama czeka na to, by mnie poczuć. Jestem dla niej już zupełnie namacalny.</div>
+                    <div class="stat"><strong>Hormony:</strong> Jej więzadła w biodrach się rozluźniają, co może ją trochę boleć.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Mów czasami do brzucha! Bardzo lubię spokojny basowy głos. Daje mi to poczucie bezpieczeństwa.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Możesz się bać, czy będziesz dobrym ojcem. Zastanawiasz się, jakim będziesz tatą w porównaniu do swojego.</div>
+                    <div class="stat"><strong>Działanie:</strong> Przegadaj to z przyjacielem albo mamą. Pamiętaj, dla mnie już jesteś najlepszym tatą.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 16. Tato, w końcu Cię usłyszę! Zacznij mówić do brzucha."</div>
+        </div>
+
+        <!-- Tydzień 20 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 20 • Trymestr 2</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Banan (160 mm, 300 g)<br><br>
+                <em>"Jesteśmy w połowie! USG pokaże, czy będę chłopcem, czy dziewczynką."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Kopię u mamy regularnie! Czasem przez mój ciężar plecy odmawiają jej posłuszeństwa.</div>
+                    <div class="stat"><strong>Emocje:</strong> Ekscytacja na maksa! Po połówkowym USG mama poczuje bardzo silną więź.</div>
+                    <div class="stat"><strong>Hormony:</strong> Wysoki progesteron i estrogen rosną i niestety dają znowu o sobie znać skurczami nóg u mamy.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Idź z nią na badanie USG! To najważniejsze podglądanie mojego małego ciałka.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Pewnie uderzą w Ciebie olbrzymie emocje u doktora. Śmiało, to przecież niezwykły moment.</div>
+                    <div class="stat"><strong>Działanie:</strong> Zapiszcie sobie pytania przed wizytą w gabinecie, nie stój wtedy obok, będziemy potrzebować Twojego zaangażowania.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 20. Jesteśmy w połowie drogi! USG powie, co przed Wami ukrywam."</div>
+        </div>
+
+        <!-- Tydzień 24 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 24 • Trymestr 2</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Kolba kukurydzy (300 mm, 600 g)<br><br>
+                <em>"Rozwijam mój słuch i wzrok, potrafię też ustalić swój własny rytm snu."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Przed mamą ważne i niezbyt przyjemne badanie – krzywa cukrowa. Możliwa też zgaga.</div>
+                    <div class="stat"><strong>Emocje:</strong> Mama zaczyna wić dla mnie gniazdko! Robi z domu idealne miejsce do mojego życia.</div>
+                    <div class="stat"><strong>Hormony:</strong> Kortyzol powoli zaczyna zwiastować to, do czego przez cały czas powoli zmierzamy.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Zaangażuj się w robienie dla mnie pokoiku w naszym domu, nie zwalaj wszystkiego na mamę.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Możesz mieć teraz współczulne objawy ciążowe, to tak zwany syndrom couvade i jest jak najbardziej udowodnionym zjawiskiem.</div>
+                    <div class="stat"><strong>Działanie:</strong> Jeśli boli Cię brzuch i masz mdłości, to wiedz, że po prostu czujesz to co my z mamą! Twoje reakcje są naukowo udokumentowane.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 24. Mam już swoje własne cykle snu. Czasem możesz czuć jak fikam koziołki pod jej skórą."</div>
+        </div>
+
+        <!-- Tydzień 28 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 28 • Trymestr 3</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Bakłażan (380 mm, 1000 g)<br><br>
+                <em>"Tato, otwieram w końcu oczy! Reaguję już na ostre światło wpadające przez brzuszek."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Trzeci trymestr... Mama znowu słabnie z sił, robią się jej obrzęki i czasem brakuje jej tchu.</div>
+                    <div class="stat"><strong>Emocje:</strong> Coraz bardziej boi się mnie wydać na świat. Bardzo potrzebuje Twojej ręki, w przenośni i dosłownie.</div>
+                    <div class="stat"><strong>Hormony:</strong> Oksytocyna przygotowuje się do akcji specjalnej.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Zrób jej masaż wieczorem, bo od odkładania się wody potwornie bolą ją nogi. Daj jej trochę oddechu od tego.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Zaczynasz czuć napięcie przed ostateczną datą naszego spotkania.</div>
+                    <div class="stat"><strong>Działanie:</strong> To jest najlepszy moment, żeby iść z nami na szkołę rodzenia. Im więcej wiemy, tym oboje będziemy spokojniejsi.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 28. Jesteśmy w trzecim trymestrze! Poczuj jak kopię – czasem będę uderzał z całej siły w brzuch mamy."</div>
+        </div>
+
+        <!-- Tydzień 32 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 32 • Trymestr 3</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Kokos (430 mm, 1700 g)<br><br>
+                <em>"Moje kości już twardnieją, choć główka musi poZOSTaĆ elastyczna żeby przejść przy powitaniu ze światem. Ćwiczę oddychanie w środowisku wód."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Często wybudzam na sikanie. To nie tylko u mnie się dzieje. Ostatnio pojawiły się skurcze ćwiczebne u nas – czyli Braxtona-Hicksa.</div>
+                    <div class="stat"><strong>Emocje:</strong> Jest zmęczona czekaniem, bywa drażliwa. Do tego te nerwy...</div>
+                    <div class="stat"><strong>Hormony:</strong> Prolaktyna to już u mamy poważny gracz, zaczyna się czas na moje pierwsze pożywienie poza brzuchem u mamy.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Przestań żartobliwie wspominać mamie ile waży. Pomagaj najlepiej jak potrafisz znaleźć ulgę do jej zmęczenia – na przykład, podłóż ułatwienia w spaniu, kup nowe wygodne poduszki.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Z niewyspania reagujesz bardzo nerwowo na wszystkie skurcze i jęki mamy, współczujesz i lękasz się zarazem.</div>
+                    <div class="stat"><strong>Działanie:</strong> Dopieść pakowanie wyprawki na "dzień W".</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 32. Mama zarazi się zmęczeniem z oczekiwania. Nie lekceważ sygnałów. Pomagaj z torbą szpitalną."</div>
+        </div>
+
+        <!-- Tydzień 36 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 36 • Trymestr 3</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Melon spadkowy (470 mm, 2600 g)<br><br>
+                <em>"Właśnie zjeżdzam miednicą główką wprost pod wyjście z domu mamy. Płuca niemal 100% ogarnięte by same obsługiwać tlen."</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Powiększyłem na max swoją garsonierę, teraz już mega ciężko mamie nosić nasz własny ciężar, ma częste "ćwiczebne" skurcze.</div>
+                    <div class="stat"><strong>Emocje:</strong> Huśtawka powraca w pełnej krasie, "już chcę stąd wyjść", krzyczę i tak też mówi moja mama!</div>
+                    <div class="stat"><strong>Hormony:</strong> Jest we nas coraz więcej oksytocyny - chemii, która sprowadzi burzę porodu.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Zrób dzisiaj za mamę dokładnie 100% zadań przy mieszkaniu. Mimo szczerych prób nie zrobi za nic bez obciążania naszego plecaka w brzuchu.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Panika? A nie jesteś chyba pierwszy raz gotowy do odepchnięcia, nie jest obciachem przyznawać się teraz przed nami. Jesteśmy dumni, tato!</div>
+                    <div class="stat"><strong>Działanie:</strong> Przemyśl "Moduł dla Taty", na salę porodową – wiedzę w tym temacie, proszę, podaj nam by w punkt i zdecydowanie omijać rafę kłopotów i zwrotów akcji.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 36. Zaczęliśmy przygotowywać drogę. Jesteś gotów by zaraz wywołać dym? Zapewnij relaks i spokojnie wejdź w swoje procedury awaryjne."</div>
+        </div>
+
+        <!-- Tydzień 38 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 38 • Trymestr 3</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Dynia (490 mm, 3000 g)<br><br>
+                <em>"Mam wszystkie organy dograne na 100%. Donosiłem z moją mamą wygraną - a Ty zaraz otworzysz szampana dla naszej trójki!"</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Utrata czopu brzuch zjechał stanowczo. Wszystko strzela twardnienie brzuch fałszywkami dla "ostrzegania" czy "trenowania".</div>
+                    <div class="stat"><strong>Emocje:</strong> Każde cięcie ukłucie to znak dopytania z przerażeniem u mamy: To już teraz panikujesz? - powtarza sama sobie!</div>
+                    <div class="stat"><strong>Hormony:</strong> Czeka na wezwanie nas do porodu.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Wydzieli nam to co ty załatwiasz reszcie rodziny "jak sytuacja - jeszcze nie urodziła!?", i dawaj spokojem mądrości odciążyć to od nas dla mamy odpoczynku. Nikt lepszy nie nadaje się na tarczę dla mamy teraz, Tato.</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Z powodu tego stanu paniki, stajesz pewnie i u Ciebie wywala nadciśnienie dzwoniąc co drugą minutę z pytaniem Jak w Tobie nas rozwija.</div>
+                    <div class="stat"><strong>Działanie:</strong> Pilnuj wóz i rezerwy bak w pobliżu, by nas zwizkować ekspresem z dachu bez zastanowienia, i pamiętaj wszystkie procedury z teczek szpitalnych przygotowanych przez waszą parę, nie zapomnij swoich gaci Tato do zmiany.</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 38. Bądź przygotowany w tryb pełne odliczanie – start będzie błyskawiczny zaraz za horyzontem!"</div>
+        </div>
+
+        <!-- Tydzień 40 -->
+        <div class="card">
+            <div class="week-badge">Tydzień 40 • Trymestr 3</div>
+            <div class="fetus-info">
+                <strong>Rozmiar:</strong> Arbuz (510 mm, 3400 g)<br><br>
+                <em>"Zrobili to, to dzień mojego ubezpieczonego biletu do powrotu przed oblicze taty, moje wszystkie rurki douszne płuc i oddychania grają gotówką oddychaniem z uderzeniami na Twoje ramiona by zapłakać wreszcie dla Was z płuc!"</em>
+            </div>
+            <div class="grid">
+                <div class="section mom">
+                    <h3>👩 Mama</h3>
+                    <div class="stat"><strong>Fizycznie:</strong> Skumulowały i napięły całe spektrum obaw u Was o ból porodu u Nas w domu w te nocy i wyjazd bo obawa jak dacie na tym ból i nas sobie wziąć.</div>
+                    <div class="stat"><strong>Emocje:</strong> Czasem potęguje się we wczesnej fali gniew mojej mamy gdy oddech nie przesuwa czasu na akcję bo nie przyśpiesza jej! Wiele stresów na barkach w to lato.</div>
+                    <div class="stat"><strong>Hormony:</strong> Oksytocyna wisi w gotowości zapalnika wyrachowania, a u nas ten mechanizm uruchamiany czeka pociągnąć o zwolnienie w matczyny rzut dla sił.</div>
+                    <div class="stat"><strong>Wskazówki:</strong> Prośba za brak moich zachować pytających jak "Zaczęło!? To skurcz u Nas mamy ty?" co kwadrans! Odłącz to z głowy i skup podziwem opiekuńczości oddechu z naszą pośpieszną ciążą mamy. Przylep i masuj!</div>
+                </div>
+                <div class="section dad">
+                    <h3>👨 Tato</h3>
+                    <div class="stat"><strong>Twoje odczucia:</strong> Dziś też to jest też Twój dzień Tato wyczekiwania, też Twój czas oddychania, to i twoje tętno serca – Jesteście na to gotowi jako drużyna.</div>
+                    <div class="stat"><strong>Działanie:</strong> Zaraz już, chwyć za barki moje ciało dla Twojego dziedziczenia tato bo dzisiaj to wygramy w końcu tą z walk do szpitala do wzięcia, nie denerwuj jej, weźmiemy się! Dasz sobie za mnie rade? Dasz!</div>
+                </div>
+            </div>
+            <div class="notification">🔔 Powiadomienie: "Tydzień 40. Zbliża się finisz, a może już! Wspieraj i dbaj by czuła to dla siebie... Spokojnie! Obserwujemy skurcze! I zaczynamy do boju Tato!"</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

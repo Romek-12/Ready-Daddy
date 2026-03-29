@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Relacja i komunikacja w parze | PAPA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --accent-purple: #a78bfa;
+      --accent-rose:   #fb7185;
+      --green:         #34d399;
+      --amber:         #fbbf24;
+      --accent-blue:   #3b82f6;
+      --text-main:     #f9fafb;
+      --text-soft:     #9ca3af;
+      --border-subtle: #1f2933;
+      --card-radius:   14px;
+      --t:             0.18s ease-out;
+      --shadow:        0 20px 50px rgba(0,0,0,0.65);
+      --font: system-ui,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 0;
+      font-family: var(--font);
+      background: radial-gradient(circle at top,#111827 0,#020617 46%,#000 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px 52px;
+    }
+    .shell {
+      width: 100%; max-width: 980px;
+      background: linear-gradient(140deg,rgba(15,23,42,.94),rgba(2,6,23,.97));
+      border-radius: 24px;
+      border: 1px solid rgba(148,163,184,.13);
+      box-shadow: var(--shadow);
+      padding: 22px 18px 28px;
+      position: relative; overflow: hidden;
+    }
+    @media(min-width:768px){ .shell{ padding:30px 32px 36px; } }
+    .shell::before {
+      content:""; position:absolute; inset:-120px; pointer-events:none; z-index:0;
+      background:
+        radial-gradient(circle at 5%  0%,  rgba(167,139,250,.18) 0,transparent 55%),
+        radial-gradient(circle at 92%  5%,  rgba(251,113,133,.14) 0,transparent 52%),
+        radial-gradient(circle at 50% 115%, rgba(52,211,153,.12)  0,transparent 60%);
+      opacity:.45;
+    }
+    .content{ position:relative; z-index:1; }
+
+    /* HEADER */
+    .header{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:20px; }
+    .header h1{ margin:0 0 6px; font-size:1.42rem; letter-spacing:.05em; text-transform:uppercase; }
+    .header-sub{ font-size:.82rem; color:var(--text-soft); max-width:550px; line-height:1.5; }
+    .tag-chip{
+      align-self:flex-start; font-size:.72rem; text-transform:uppercase;
+      letter-spacing:.16em; padding:6px 11px; border-radius:999px;
+      border:1px solid rgba(167,139,250,.55);
+      background:radial-gradient(circle at 0 0,rgba(167,139,250,.28),transparent 65%);
+      color:#ede9fe; white-space:nowrap; flex-shrink:0;
+    }
+    .divider{ margin:4px 0 20px; border:none; border-top:1px solid rgba(148,163,184,.18); }
+
+    /* INTRO */
+    .intro-card{
+      border-radius:var(--card-radius); padding:16px 16px 15px;
+      background:linear-gradient(135deg,rgba(15,23,42,.88),rgba(30,41,59,.55));
+      border:1px solid rgba(148,163,184,.22);
+      display:flex; gap:14px; align-items:flex-start; margin-bottom:22px;
+    }
+    .intro-avatar{
+      width:40px; height:40px; border-radius:50%; flex-shrink:0;
+      background:radial-gradient(circle at 40% 0,rgba(248,250,252,.28),rgba(139,92,246,.85));
+      border:1px solid rgba(167,139,250,.35);
+      display:flex; align-items:center; justify-content:center; font-size:1.25rem;
+    }
+    .intro-label{ font-size:.68rem; text-transform:uppercase; letter-spacing:.18em; color:var(--accent-purple); margin-bottom:5px; }
+    .intro-text{ font-size:.92rem; line-height:1.62; font-style:italic; color:#e2e8f0; }
+
+    /* GRID */
+    .sections-grid{ display:grid; grid-template-columns:1fr; gap:14px; }
+    @media(min-width:860px){
+      .sections-grid{ grid-template-columns:1fr 1fr; }
+      .card-wide{ grid-column:1 / -1; }
+    }
+
+    /* CARD */
+    .card{
+      background:rgba(15,23,42,.88); border-radius:var(--card-radius);
+      border:1px solid var(--border-subtle);
+      padding:16px 16px 15px; position:relative; overflow:hidden;
+      transition:border-color var(--t),transform var(--t),box-shadow var(--t),background var(--t);
+    }
+    .card::after{
+      content:""; position:absolute; inset:-1px; border-radius:inherit; pointer-events:none;
+      background:radial-gradient(circle at top,rgba(167,139,250,.2),transparent 60%);
+      opacity:0; transition:opacity var(--t);
+    }
+    .card:hover{ border-color:rgba(167,139,250,.85); box-shadow:0 18px 42px rgba(15,23,42,.92); transform:translateY(-2px); background:rgba(15,23,42,.98); }
+    .card:hover::after{ opacity:1; }
+
+    .card-rose  { border-color:rgba(251,113,133,.4); }
+    .card-purple{ background:linear-gradient(135deg,rgba(15,23,42,.92),rgba(91,33,182,.45)); border-color:rgba(167,139,250,.55); }
+    .card-blue  { background:linear-gradient(135deg,rgba(15,23,42,.92),rgba(30,64,175,.45)); border-color:rgba(96,165,250,.6); }
+    .card-amber { border-color:rgba(251,191,36,.4); }
+
+    /* CARD HEADER */
+    .card-header{ display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:12px; }
+    .card-title{ display:flex; align-items:baseline; gap:7px; font-size:.92rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; }
+    .idx        { font-size:.72rem; letter-spacing:.18em; color:var(--accent-purple); }
+    .idx-rose   { color:var(--accent-rose); }
+    .idx-green  { color:var(--green); }
+    .idx-amber  { color:var(--amber); }
+    .card-pill  { font-size:.68rem; padding:2px 8px; border-radius:999px; border:1px solid rgba(148,163,184,.3); color:var(--text-soft); text-transform:uppercase; letter-spacing:.12em; white-space:nowrap; }
+
+    /* GŁOS DZIECKA */
+    .voice-block{ display:flex; flex-direction:column; gap:10px; }
+    .voice-line { display:flex; gap:10px; align-items:flex-start; }
+    .v-icon{
+      width:28px; height:28px; border-radius:50%; flex-shrink:0; margin-top:1px;
+      background:radial-gradient(circle at 40% 0,rgba(248,250,252,.18),rgba(109,40,217,.72));
+      border:1px solid rgba(167,139,250,.28);
+      display:flex; align-items:center; justify-content:center; font-size:.85rem;
+    }
+    .v-icon-blue{
+      background:radial-gradient(circle at 40% 0,rgba(248,250,252,.18),rgba(29,78,216,.75));
+      border-color:rgba(96,165,250,.28);
+    }
+    .v-icon-amber{
+      background:radial-gradient(circle at 40% 0,rgba(248,250,252,.18),rgba(180,83,9,.75));
+      border-color:rgba(251,191,36,.28);
+    }
+    .v-icon-sm{
+      width:22px; height:22px; border-radius:50%; flex-shrink:0; margin-top:2px;
+      background:rgba(248,250,252,.07); border:1px solid rgba(148,163,184,.15);
+      display:flex; align-items:center; justify-content:center; font-size:.75rem;
+    }
+    .v-text{ font-size:.87rem; color:#cbd5e1; line-height:1.62; font-style:italic; }
+
+    .hl-purple{ color:#c4b5fd; font-weight:600; font-style:normal; }
+    .hl-rose  { color:#fda4af; font-weight:600; font-style:normal; }
+    .hl-green { color:var(--green); font-weight:600; font-style:normal; }
+    .hl-amber { color:var(--amber); font-weight:600; font-style:normal; }
+    .hl-white { color:#f1f5f9; font-weight:600; font-style:normal; }
+
+    /* QUOTE BLOCK */
+    .quote-block{
+      margin:8px 0 2px; padding:10px 14px;
+      border-left:3px solid rgba(167,139,250,.7);
+      background:rgba(109,40,217,.12);
+      border-radius:0 8px 8px 0;
+      font-size:.85rem; color:#ddd6fe; line-height:1.55; font-style:italic;
+    }
+    .quote-block.good{
+      border-left-color:rgba(52,211,153,.8);
+      background:rgba(52,211,153,.08); color:#a7f3d0;
+    }
+    .quote-label{
+      display:block; font-size:.65rem; text-transform:uppercase;
+      letter-spacing:.18em; margin-bottom:4px; font-style:normal;
+      color:var(--accent-purple);
+    }
+    .quote-label.good{ color:var(--green); }
+
+    /* ACTIONS */
+    .action-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px; }
+    .action-item{ display:flex; gap:10px; align-items:flex-start; }
+    .a-bullet{
+      width:24px; height:24px; border-radius:7px; flex-shrink:0; margin-top:1px;
+      display:flex; align-items:center; justify-content:center; font-size:.75rem; font-weight:700;
+      background:rgba(52,211,153,.2); border:1px solid rgba(52,211,153,.55); color:var(--green);
+    }
+    .a-text{ font-size:.87rem; color:#cbd5e1; line-height:1.58; }
+
+    /* GESTURE CHIPS */
+    .gestures-row{ display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin-top:12px; }
+    @media(min-width:860px){ .gestures-row{ grid-template-columns:repeat(4,1fr); } }
+    .gesture-chip{
+      background:rgba(15,23,42,.75); border:1px solid rgba(251,191,36,.35);
+      border-radius:10px; padding:10px 11px; font-size:.81rem; color:#fde68a;
+      display:flex; align-items:center; gap:7px;
+      transition:border-color var(--t),background var(--t);
+    }
+    .gesture-chip:hover{ border-color:rgba(251,191,36,.75); background:rgba(251,191,36,.1); }
+    .gesture-emoji{ font-size:1.1rem; }
+
+    /* FOOTER */
+    .footer-note{
+      margin-top:24px; padding-top:14px;
+      border-top:1px solid rgba(148,163,184,.18);
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      font-size:.78rem; color:var(--text-soft);
+    }
+    .footer-brand{ font-size:.72rem; text-transform:uppercase; letter-spacing:.16em; color:#c4b5fd; }
+  </style>
+</head>
+<body>
+<div class="page">
+  <main class="shell">
+    <div class="content">
+
+      <!-- HEADER -->
+      <header class="header">
+        <div>
+          <h1>Relacja i komunikacja w parze</h1>
+          <div class="header-sub">
+            Tato, moje narodziny zmieniły wasz świat — razem z grafikiem dnia zmieniła się też wasza relacja.
+            Tu masz narzędzia, żebyś był partnerem, a nie tylko rodzicem na dyżurze.
+          </div>
+        </div>
+        <div class="tag-chip">tryb&nbsp;pary</div>
+      </header>
+
+      <hr class="divider" />
+
+      <!-- INTRO -->
+      <section class="intro-card">
+        <div class="intro-avatar">👶</div>
+        <div>
+          <div class="intro-label">mówię do ciebie, tato</div>
+          <div class="intro-text">
+            Odkąd jestem, wasza relacja z mamą przechodzi przez coś, czego nie da się pominąć.
+            Ta zakładka pokaże ci, jak rozmawiać, dzielić się obowiązkami i nadal być parą —
+            a nie tylko rodzicami, którzy mijają się w drzwiach.
+          </div>
+        </div>
+      </section>
+
+      <!-- SEKCJE -->
+      <section class="sections-grid">
+
+        <!-- 01 Co się zmienia -->
+        <article class="card card-rose">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="idx idx-rose">01</span>
+              <span>Co się zwykle zmienia</span>
+            </div>
+            <div class="card-pill">nowy&nbsp;rozdział</div>
+          </div>
+          <div class="voice-block">
+            <div class="voice-line">
+              <div class="v-icon">👶</div>
+              <div class="v-text">
+                Od kiedy jestem, mniej śpicie i więcej napięć pojawia się wokół tego, kto co robi.
+                To <span class="hl-rose">częsty etap</span> — trudny, ale do przejścia.
+                Mam was oboje i chcę, żebyście mieli siebie.
+              </div>
+            </div>
+            <div class="voice-line">
+              <div class="v-icon-sm">💬</div>
+              <div class="v-text">
+                Bliskość fizyczna i seks mogą zejść na dalszy plan — ból, zmęczenie, hormony mamy.
+                To normalne i wymaga czasu oraz
+                <span class="hl-white">delikatnej rozmowy</span>, nie ciśnienia.
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 Komunikacja -->
+        <article class="card card-purple">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="idx">02</span>
+              <span>Proste zasady komunikacji</span>
+            </div>
+            <div class="card-pill">jak&nbsp;mówić</div>
+          </div>
+          <div class="voice-block">
+            <div class="voice-line">
+              <div class="v-icon">👶</div>
+              <div class="v-text">
+                Tato, mów o faktach i uczuciach — nie o ocenach mamy. Różnica jest prosta:
+              </div>
+            </div>
+            <div class="quote-block">
+              <span class="quote-label">❌ zamiast tego</span>
+              „Ty w ogóle mnie nie widzisz."
+            </div>
+            <div class="quote-block good">
+              <span class="quote-label good">✅ powiedz to</span>
+              „Jestem wykończony i potrzebuję godziny snu."
+            </div>
+            <div class="voice-line">
+              <div class="v-icon-sm">💬</div>
+              <div class="v-text">
+                Zakładaj, że mama robi tyle, ile może. Oboje robicie maksimum —
+                nikt nikomu <span class="hl-white">nie utrudnia specjalnie</span>.
+              </div>
+            </div>
+            <div class="voice-line">
+              <div class="v-icon-sm">⏱️</div>
+              <div class="v-text">
+                Trudne tematy poruszajcie, gdy oboje macie choć trochę energii.
+                Wiele kłótni to po prostu
+                <span class="hl-rose">starcie dwóch wyczerpań</span> — nie prawdziwy problem.
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 Podział obowiązków -->
+        <article class="card card-blue card-wide">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="idx idx-green">03</span>
+              <span>Podział obowiązków „na twardo"</span>
+            </div>
+            <div class="card-pill">tato,&nbsp;działaj</div>
+          </div>
+          <div class="voice-line" style="margin-bottom:14px;">
+            <div class="v-icon v-icon-blue">👶</div>
+            <div class="v-text">
+              Tato, spisz to. Jasny podział eliminuje połowę nieporozumień.
+              Oto co możesz przejąć —
+              <span class="hl-white">to nie jest pomoc mamie. To twoja część.</span>
+            </div>
+          </div>
+          <ul class="action-list">
+            <li class="action-item">
+              <div class="a-bullet">A</div>
+              <div class="a-text">
+                <strong style="color:#e2e8f0;">Noce, kąpiel, przewijanie</strong> —
+                ustalcie kto i kiedy. Jeden pełny blok nocny dla mamy = bezcenne.
+              </div>
+            </li>
+            <li class="action-item">
+              <div class="a-bullet">B</div>
+              <div class="a-text">
+                <strong style="color:#e2e8f0;">Zakupy, gotowanie, kuchnia</strong> —
+                przejmij cały obszar. Mama nie powinna myśleć, co jest w lodówce.
+              </div>
+            </li>
+            <li class="action-item">
+              <div class="a-bullet">C</div>
+              <div class="a-text">
+                <strong style="color:#e2e8f0;">Kontakt z lekarzem i terminy wizyt</strong> —
+                bądź tym, który śledzi kalendarz i pilnuje terminów. To realnie odciąża mamę.
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 04 Bycie parą -->
+        <article class="card card-amber card-wide">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="idx idx-amber">04</span>
+              <span>Jak dbać o bycie parą</span>
+            </div>
+            <div class="card-pill">małe&nbsp;gesty</div>
+          </div>
+          <div class="voice-block">
+            <div class="voice-line">
+              <div class="v-icon v-icon-amber">👶</div>
+              <div class="v-text">
+                Kilka minut dziennie tylko dla was — bez telefonów, bez rozmów o mnie —
+                <span class="hl-amber">pomaga wam pamiętać, że nadal jesteście parą</span>,
+                a nie tylko moimi rodzicami.
+              </div>
+            </div>
+            <div class="voice-line">
+              <div class="v-icon-sm">💬</div>
+              <div class="v-text">
+                Drobne gesty mają ogromne znaczenie dla waszej relacji.
+                Mama to czuje i pamięta. Tu masz gotową listę:
+              </div>
+            </div>
+          </div>
+          <div class="gestures-row">
+            <div class="gesture-chip"><span class="gesture-emoji">🛁</span> Kąpiel dla mamy</div>
+            <div class="gesture-chip"><span class="gesture-emoji">💆</span> Masaż pleców</div>
+            <div class="gesture-chip"><span class="gesture-emoji">🍵</span> Herbata bez pytania</div>
+            <div class="gesture-chip"><span class="gesture-emoji">🌙</span> Cała noc przejęta</div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer-note">
+        <span class="footer-brand">PAPA · partner. nie widz.</span>
+        <span>Ta zakładka nie zastępuje rozmowy — ma cię do niej lepiej przygotować.</span>
+      </footer>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+Meta API setup for Facebook and Instagram
+
+1. File used by the scraper:
+   meta_api_config.json
+
+2. Required keys:
+   graph_api_version
+   access_token
+   instagram_business_account_id
+   facebook_enabled
+   instagram_enabled
+
+3. Meaning:
+   access_token
+   Long-lived Meta access token used for Graph API requests.
+
+   instagram_business_account_id
+   Your own Instagram Business or Creator account ID connected to Meta.
+   It is used for Instagram Business Discovery queries against competitor usernames.
+
+   facebook_enabled
+   Set to true only after your app and token are ready to read Facebook page posts.
+
+   instagram_enabled
+   Set to true only after your token and instagram_business_account_id are ready.
+
+4. Notes:
+   - The current script uses Meta API first for Facebook and Instagram.
+   - If API config is missing or disabled, the script falls back to the legacy scraper.
+   - TikTok stays disabled by default.

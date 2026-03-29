@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+
+# Environment variables - NEVER commit secrets
+.env
+.env*.local
+
+# Build outputs
+dist/
+build/
+web-build/
+
+# Expo
+.expo/
+expo-env.d.ts
+
+# Native builds
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+/ios
+/android
+
+# Metro
+.metro-health-check*
+
+# Logs
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# OS
+.DS_Store
+
+# TypeScript
+*.tsbuildinfo
+
+# SQLite database files
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Misc
+*.pem

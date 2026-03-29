@@ -1,0 +1,118 @@
+const sharedTheme = {
+  fonts: {
+    title: 'ClimateCrisis',
+  },
+  spacing: {
+    xs: 4,
+    sm: 8,
+    md: 16,
+    lg: 24,
+    xl: 32,
+    xxl: 48,
+  },
+  borderRadius: {
+    sm: 8,
+    md: 12,
+    lg: 16,
+    xl: 28,
+    xxl: 32,
+    full: 9999,
+  },
+  fontSize: {
+    xs: 11,
+    sm: 13,
+    md: 15,
+    lg: 17,
+    xl: 22,
+    xxl: 28,
+    hero: 34,
+  },
+  fontWeight: {
+    regular: '400' as const,
+    medium: '500' as const,
+    semibold: '600' as const,
+    bold: '700' as const,
+  },
+};
+
+const darkColors = {
+  background: '#0A0E1A',
+  surface: '#141928',
+  surfaceLight: '#1E2540',
+  card: '#1E2540',
+  cardBorder: 'rgba(255, 255, 255, 0.05)',
+  primary: '#00D9A6',
+  primaryDark: '#00B88A',
+  primaryLight: 'rgba(0, 217, 166, 0.15)',
+  accent: '#FFB547',
+  accentLight: 'rgba(255, 181, 71, 0.15)',
+  danger: '#FF5C5C',
+  dangerLight: 'rgba(255, 92, 92, 0.15)',
+  text: '#FFFFFF',
+  textSecondary: '#8B95B5',
+  textMuted: '#5A6480',
+  white: '#FFFFFF',
+  black: '#000000',
+  gradientStart: '#0A0E1A',
+  gradientEnd: '#141928',
+  tabBar: '#0F1322',
+  tabBarBorder: 'rgba(255, 255, 255, 0.05)',
+  trimester1: '#FF6B9D',
+  trimester2: '#00D9A6',
+  trimester3: '#7C5CFF',
+  fetus: '#00D9A6',
+  partner: '#FF6B9D',
+  actionCards: '#FFB547',
+  checkups: '#5CA8FF',
+  planning: '#7C5CFF',
+  birth: '#FF5C5C',
+  dadModule: '#00C2E0',
+  notifications: '#FFB547',
+  fourthTrimester: '#FF6B9D',
+  postBirth: '#A78BFA',
+};
+
+const lightColors = {
+  background: '#F8FAFC',
+  surface: '#F1F5F9',
+  surfaceLight: '#E2E8F0',
+  card: '#FFFFFF',
+  cardBorder: 'rgba(0, 0, 0, 0.05)',
+  primary: '#00B88A', // darker for better contrast on light
+  primaryDark: '#008C69',
+  primaryLight: 'rgba(0, 184, 138, 0.15)',
+  accent: '#F59E0B',
+  accentLight: 'rgba(245, 158, 11, 0.15)',
+  danger: '#EF4444',
+  dangerLight: 'rgba(239, 68, 68, 0.15)',
+  text: '#0F172A',
+  textSecondary: '#475569',
+  textMuted: '#94A3B8',
+  white: '#FFFFFF',
+  black: '#000000',
+  gradientStart: '#F8FAFC',
+  gradientEnd: '#E2E8F0',
+  tabBar: '#FFFFFF',
+  tabBarBorder: 'rgba(0, 0, 0, 0.1)',
+  trimester1: '#EC4899',
+  trimester2: '#10B981',
+  trimester3: '#6366F1',
+  fetus: '#10B981',
+  partner: '#EC4899',
+  actionCards: '#F59E0B',
+  checkups: '#3B82F6',
+  planning: '#6366F1',
+  birth: '#EF4444',
+  dadModule: '#06B6D4',
+  notifications: '#F59E0B',
+  fourthTrimester: '#EC4899',
+  postBirth: '#8B5CF6',
+};
+
+export const darkTheme = { ...sharedTheme, colors: darkColors };
+export const lightTheme = { ...sharedTheme, colors: lightColors };
+
+// Tygodniowy motyw defaultowy by nie łamać jeszcze istniejącego kodu zanim zmienimy
+export const theme = darkTheme;
+
+export type Theme = typeof darkTheme;

@@ -1,0 +1,614 @@
+[
+  {
+    "id": 1,
+    "weekRange": "Do 10. tygodnia",
+    "title": "Pierwsza wizyta kontrolna",
+    "subtitle": "Niezbędny wywiad medyczny, założenie karty ciąży i zlecenia pierwszych badań laboratoryjnych.",
+    "colorKey": "trimester1",
+    "categories": [
+      {
+        "id": 1,
+        "title": "Wizyta u ginekologa / położnej",
+        "icon": "hospital",
+        "colorKey": "birth",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 1,
+            "name": "Badanie ogólne ginekologiczne i założenie karty ciąży",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 2,
+            "name": "Pomiar ciśnienia tętniczego oraz masy ciała",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 3,
+            "name": "Badanie gruczołów sutkowych",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 4,
+            "name": "Skierowanie na konsultację stomatologiczną",
+            "optional": false,
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Badania laboratoryjne krwi i moczu",
+        "icon": "science",
+        "colorKey": "dadModule",
+        "singleCheck": true,
+        "items": [
+          {
+            "id": 5,
+            "name": "Morfologia krwi",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 6,
+            "name": "Badanie ogólne moczu",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 7,
+            "name": "Oznaczenie grupy krwi i czynnika Rh",
+            "optional": false,
+            "note": "oraz przeciwciał odpornościowych"
+          },
+          {
+            "id": 8,
+            "name": "Badanie stężenia glukozy we krwi na czczo",
+            "optional": false,
+            "note": "+ opcjonalnie test OGTT przy czynnikach ryzyka"
+          },
+          {
+            "id": 9,
+            "name": "Badanie VDRL (kiła)",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 10,
+            "name": "Przeciwciała anty-HIV, HCV",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 11,
+            "name": "Antygen HBs (WZW B)",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 12,
+            "name": "Badanie w kierunku toksoplazmozy (IgG, IgM)",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 13,
+            "name": "Badanie w kierunku różyczki (IgG, IgM)",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 14,
+            "name": "Badanie TSH (tarczyca)",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 15,
+            "name": "Badanie cytologiczne",
+            "optional": false,
+            "note": "jeśli nie było wykonywane w ciągu ostatnich 6 miesięcy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "weekRange": "11–14 tydzień",
+    "title": "USG genetyczne i test PAPP-A",
+    "subtitle": "Ocena ryzyka wystąpienia wad genetycznych i dokładne ustalenie terminu porodu.",
+    "colorKey": "trimester1",
+    "categories": [
+      {
+        "id": 3,
+        "title": "Wizyta u ginekologa",
+        "icon": "hospital",
+        "colorKey": "birth",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 16,
+            "name": "Badanie ogólne, pomiar masy ciała i ciśnienia tętniczego",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 17,
+            "name": "Ocena ryzyka depresji ciążowej (wywiad)",
+            "optional": false,
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Badanie USG",
+        "icon": "fetus",
+        "colorKey": "primary",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 18,
+            "name": "USG I trymestru (genetyczne)",
+            "optional": false,
+            "note": "ocena parametru NT, kości nosowej i anatomii płodu"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Badania prenatalne",
+        "icon": "search",
+        "colorKey": "checkups",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 19,
+            "name": "Test podwójny (PAPP-A + wolna podjednostka beta-hCG)",
+            "optional": false,
+            "note": "diagnostyka ryzyka trisomii"
+          },
+          {
+            "id": 20,
+            "name": "Wolne płodowe DNA (NIPT)",
+            "optional": true,
+            "note": "np. NIFTY, SANCCOB, pobranie krwi matki"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "weekRange": "15–20 tydzień",
+    "title": "Wizyta kontrolna (II trymestr)",
+    "subtitle": "Krótsza wizyta monitorująca parametry i badania kontrolne.",
+    "colorKey": "trimester2",
+    "categories": [
+      {
+        "id": 6,
+        "title": "Wizyta u ginekologa",
+        "icon": "hospital",
+        "colorKey": "birth",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 21,
+            "name": "Badanie ogólne, waga, ciśnienie",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 22,
+            "name": "Ocena czystości pochwy (biocenoza)",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 23,
+            "name": "Badanie cytologiczne",
+            "optional": false,
+            "note": "jeśli nie wykonano wcześniej"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Badania laboratoryjne",
+        "icon": "science",
+        "colorKey": "dadModule",
+        "singleCheck": true,
+        "items": [
+          {
+            "id": 24,
+            "name": "Morfologia krwi",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 25,
+            "name": "Badanie ogólne moczu",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 26,
+            "name": "Przeciwciała anty-Rh",
+            "optional": false,
+            "note": "tylko w przypadku ujemnego Rh u kobiety!"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Dodatkowa diagnostyka nieinwazyjna",
+        "icon": "search",
+        "colorKey": "checkups",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 27,
+            "name": "Test potrójny",
+            "optional": true,
+            "note": "wykonywany w określonych przypadkach zwiększonego ryzyka wad genetycznych"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "weekRange": "18–22 tydzień",
+    "title": "USG połówkowe",
+    "subtitle": "Dokładna ocena budowy anatomicznej narządów malucha, w tym echa serca oraz lokalizacji łożyska.",
+    "colorKey": "trimester2",
+    "categories": [
+      {
+        "id": 9,
+        "title": "USG referencyjne (2. trymestr)",
+        "icon": "fetus",
+        "colorKey": "primary",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 28,
+            "name": "USG połówkowe",
+            "optional": false,
+            "note": "szczegółowa ocena anatomii dziecka (m.in. serce, układ nerwowy)"
+          },
+          {
+            "id": 29,
+            "name": "USG 3D/4D",
+            "optional": true,
+            "note": "dla pamiątki w świetnym momencie (dodatkowo płatne)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "weekRange": "21–26 tydzień",
+    "title": "Test tolerancji glukozy (OGTT)",
+    "subtitle": "Ważne badanie w kierunku cukrzycy ciążowej oraz rutynowa kontrola u ginekologa.",
+    "colorKey": "trimester2",
+    "categories": [
+      {
+        "id": 10,
+        "title": "Wizyta u ginekologa",
+        "icon": "hospital",
+        "colorKey": "birth",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 30,
+            "name": "Badanie ogólne (ciśnienie, tętno, waga)",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 31,
+            "name": "Wysłuchanie czynności serca płodu",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 32,
+            "name": "Omówienie testu obciążenia glukozą",
+            "optional": false,
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Badania laboratoryjne",
+        "icon": "science",
+        "colorKey": "dadModule",
+        "singleCheck": true,
+        "items": [
+          {
+            "id": 33,
+            "name": "Morfologia krwi",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 34,
+            "name": "Badanie ogólne moczu",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 35,
+            "name": "Krzywa cukrowa (OGTT 75g glukozy)",
+            "optional": false,
+            "note": "Trzypunktowe badanie na czczo, po 1h i 2h (przez 24-28 tydzień)"
+          },
+          {
+            "id": 36,
+            "name": "Przeciwciała anty-Rh",
+            "optional": false,
+            "note": "przy ujemnym Rh matki"
+          },
+          {
+            "id": 37,
+            "name": "Badanie w kierunku toksoplazmozy",
+            "optional": false,
+            "note": "jeśli poprzedni wynik przeciwciał IgG był ujemny"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "weekRange": "27–32 tydzień",
+    "title": "USG 3. trymestru (Doppler)",
+    "subtitle": "Ocena wagi i wzrostu dziecka oraz wydolności łożyska i przepływów krwi.",
+    "colorKey": "trimester3",
+    "categories": [
+      {
+        "id": 12,
+        "title": "Wizyta kontrolna",
+        "icon": "hospital",
+        "colorKey": "birth",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 38,
+            "name": "Badanie ginekologiczne i wywiad (ciśnienie, tętno)",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 39,
+            "name": "Ocena czynności serca płodu",
+            "optional": false,
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Badania laboratoryjne",
+        "icon": "science",
+        "colorKey": "dadModule",
+        "singleCheck": true,
+        "items": [
+          {
+            "id": 40,
+            "name": "Morfologia krwi",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 41,
+            "name": "Badanie ogólne moczu",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 42,
+            "name": "Przeciwciała anty-Rh",
+            "optional": false,
+            "note": "U kobiet Rh-"
+          },
+          {
+            "id": 43,
+            "name": "Podanie immunoglobuliny anty-D",
+            "optional": false,
+            "note": "Zalecane u kobiet Rh- między 28 a 30 tygodniem ciąży"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "USG referencyjne (3. trymestr)",
+        "icon": "fetus",
+        "colorKey": "primary",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 44,
+            "name": "USG III trymestru",
+            "optional": false,
+            "note": "Wraz z oceną przepływów naczyniowych (Doppler) i ilości wód płodowych"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "weekRange": "33–37 tydzień",
+    "title": "Posiew GBS i komplet badań III trymestru",
+    "subtitle": "Ważne badanie na obecność paciorkowca oraz przygotowanie do porodu.",
+    "colorKey": "trimester3",
+    "categories": [
+      {
+        "id": 15,
+        "title": "Wizyta u ginekologa",
+        "icon": "hospital",
+        "colorKey": "birth",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 45,
+            "name": "Badanie ogólne, waga, ciśnienie i badanie położnicze",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 46,
+            "name": "Ocena ruchów płodu",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 47,
+            "name": "Wysłuchanie tętna płodu",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 48,
+            "name": "Ocena ryzyka depresji (powtórny wywiad)",
+            "optional": false,
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "title": "Badania laboratoryjne i posiew",
+        "icon": "science",
+        "colorKey": "dadModule",
+        "singleCheck": true,
+        "items": [
+          {
+            "id": 49,
+            "name": "Morfologia krwi",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 50,
+            "name": "Badanie ogólne moczu",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 51,
+            "name": "Antygen HBs (WZW B)",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 52,
+            "name": "Przeciwciała anty-HIV",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 53,
+            "name": "Wymaz na paciorkowce - GBS",
+            "optional": false,
+            "note": "Z pochwy i odbytu (bardzo ważne przed porodem naturalnym; wykonywane ok 35-37 tyg.)"
+          },
+          {
+            "id": 54,
+            "name": "Badanie VDRL, HCV",
+            "optional": false,
+            "note": "Zwykle w III trymestrze przy zwiększonym ryzyku"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "weekRange": "38–39 tydzień",
+    "title": "Ostatnie kontrole przed rozwiązaniem",
+    "subtitle": "Gotowość do wyjazdu na boks i cotygodniowy nadzór.",
+    "colorKey": "trimester3",
+    "categories": [
+      {
+        "id": 17,
+        "title": "Wizyta u ginekologa",
+        "icon": "hospital",
+        "colorKey": "birth",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 55,
+            "name": "Ocena szyjki macicy (badanie ginekologiczne)",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 56,
+            "name": "Kontrola czynności serca i ocena aktywności ruchów",
+            "optional": false,
+            "note": null
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "title": "W razie zaleceń",
+        "icon": "science",
+        "colorKey": "dadModule",
+        "singleCheck": true,
+        "items": [
+          {
+            "id": 57,
+            "name": "Morfologia",
+            "optional": false,
+            "note": null
+          },
+          {
+            "id": 58,
+            "name": "Mocz ogólny",
+            "optional": false,
+            "note": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "weekRange": "40+ tydzień",
+    "title": "Ciąża przeterminowana",
+    "subtitle": "Rejestracje czynności serca (KTG) i weryfikacja ilości płynu owodniowego.",
+    "colorKey": "danger",
+    "categories": [
+      {
+        "id": 19,
+        "title": "Wzmożony nadzór",
+        "icon": "warning",
+        "colorKey": "danger",
+        "singleCheck": false,
+        "items": [
+          {
+            "id": 59,
+            "name": "Zapis KTG (kardiotokografia)",
+            "optional": false,
+            "note": "Mierzy napięcie mięśnia macicy i bicie serca płodu"
+          },
+          {
+            "id": 60,
+            "name": "Badanie USG",
+            "optional": false,
+            "note": "Monitoring ilości płynu owodniowego"
+          }
+        ]
+      }
+    ]
+  }
+]

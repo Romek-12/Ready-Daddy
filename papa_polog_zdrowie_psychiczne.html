@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Połóg i zdrowie psychiczne | PAPA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-elevated: #10131b;
+      --accent: #3b82f6;
+      --accent-soft: rgba(59,130,246,0.15);
+      --danger: #f97373;
+      --green: #34d399;
+      --text-main: #f9fafb;
+      --text-soft: #9ca3af;
+      --border-subtle: #1f2933;
+      --card-radius: 14px;
+      --transition-fast: 0.18s ease-out;
+      --shadow-soft: 0 18px 45px rgba(0,0,0,0.6);
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-main);
+      background: radial-gradient(circle at top, #111827 0, #020617 46%, #000 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px 48px;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 960px;
+      background: linear-gradient(140deg, rgba(15,23,42,0.94), rgba(2,6,23,0.97));
+      border-radius: 24px;
+      border: 1px solid rgba(148,163,184,0.13);
+      box-shadow: var(--shadow-soft);
+      padding: 22px 18px 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+      .shell { padding: 28px 30px 32px; }
+    }
+
+    .shell::before {
+      content: "";
+      position: absolute;
+      inset: -120px;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(59,130,246,0.17) 0, transparent 60%),
+        radial-gradient(circle at 90% 0%, rgba(244,63,94,0.13) 0, transparent 55%),
+        radial-gradient(circle at 50% 120%, rgba(52,211,153,0.12) 0, transparent 60%);
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .content { position: relative; z-index: 1; }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      margin: 0 0 6px;
+      font-size: 1.45rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .header-sub {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      max-width: 540px;
+      line-height: 1.5;
+    }
+
+    .tag-chip {
+      align-self: flex-start;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(59,130,246,0.55);
+      background: radial-gradient(circle at 0 0, rgba(59,130,246,0.28), transparent 65%);
+      color: #dbeafe;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .divider {
+      margin: 4px 0 20px;
+      border: none;
+      border-top: 1px solid rgba(148,163,184,0.18);
+    }
+
+    /* ── INTRO (głos dziecka) ── */
+    .intro-card {
+      border-radius: var(--card-radius);
+      padding: 16px 16px 15px;
+      background: linear-gradient(135deg,
+        rgba(15,23,42,0.85) 0%,
+        rgba(30,41,59,0.6) 100%);
+      border: 1px solid rgba(148,163,184,0.22);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .intro-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 0,
+        rgba(248,250,252,0.28), rgba(37,99,235,0.85));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      border: 1px solid rgba(148,163,184,0.25);
+    }
+
+    .intro-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      margin-bottom: 5px;
+    }
+
+    .intro-text {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      font-style: italic;
+      color: #e2e8f0;
+    }
+
+    /* ── GRID ── */
+    .sections-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    @media (min-width: 860px) {
+      .sections-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .card-wide {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: rgba(15,23,42,0.88);
+      border-radius: var(--card-radius);
+      border: 1px solid var(--border-subtle);
+      padding: 15px 15px 14px;
+      position: relative;
+      overflow: hidden;
+      transition:
+        border-color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      background: radial-gradient(circle at top,
+        rgba(59,130,246,0.22), transparent 60%);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+      pointer-events: none;
+    }
+
+    .card:hover {
+      border-color: rgba(96,165,250,0.9);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+      transform: translateY(-2px);
+      background: rgba(15,23,42,0.98);
+    }
+
+    .card:hover::after { opacity: 1; }
+
+    .card-accent-blue {
+      background: linear-gradient(135deg,
+        rgba(15,23,42,0.92), rgba(30,64,175,0.55));
+      border-color: rgba(59,130,246,0.65);
+    }
+
+    .card-accent-red {
+      border-color: rgba(249,115,115,0.45);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      display: flex;
+      align-items: baseline;
+      gap: 7px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .card-index {
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.18em;
+    }
+
+    .card-index-red { color: var(--danger); }
+    .card-index-green { color: var(--green); }
+
+    .card-pill {
+      font-size: 0.68rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.35);
+      color: var(--text-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      white-space: nowrap;
+    }
+
+    /* ── GŁOS DZIECKA ── */
+    .voice-block {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .voice-line {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .voice-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 0,
+        rgba(248,250,252,0.18), rgba(37,99,235,0.7));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      border: 1px solid rgba(148,163,184,0.2);
+      margin-top: 1px;
+    }
+
+    .voice-icon-sm {
+      width: 22px;
+      height: 22px;
+      font-size: 0.75rem;
+      border-radius: 50%;
+      background: rgba(248,250,252,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid rgba(148,163,184,0.15);
+      margin-top: 2px;
+    }
+
+    .voice-text {
+      font-size: 0.87rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .highlight-danger { color: var(--danger); font-weight: 700; }
+    .highlight-accent { color: #93c5fd; font-weight: 600; }
+    .highlight-green  { color: var(--green); font-weight: 600; }
+
+    /* ── SEKCJA AKCJI ── */
+    .action-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .action-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .action-bullet {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: rgba(59,130,246,0.25);
+      border: 1px solid rgba(59,130,246,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #93c5fd;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .action-text {
+      font-size: 0.87rem;
+      color: #cbd5e1;
+      line-height: 1.55;
+    }
+
+    /* ── FOOTER ── */
+    .footer-note {
+      margin-top: 22px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(148,163,184,0.18);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+    }
+
+    .footer-brand {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #a5b4fc;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <main class="shell">
+    <div class="content">
+
+      <!-- HEADER -->
+      <header class="header">
+        <div>
+          <h1>Połóg i zdrowie psychiczne</h1>
+          <div class="header-sub">
+            Po porodzie zaczyna się nowy rozdział. Mama potrzebuje cię teraz inaczej – mądrzej i uważniej.
+            Tu znajdziesz taktyczną mapę tych tygodni.
+          </div>
+        </div>
+        <div class="tag-chip">tryb&nbsp;wsparcia</div>
+      </header>
+
+      <hr class="divider" />
+
+      <!-- INTRO – głos dziecka -->
+      <section class="intro-card">
+        <div class="intro-avatar">👶</div>
+        <div>
+          <div class="intro-label">mówię do ciebie, tato</div>
+          <div class="intro-text">
+            Tato, poród się skończył – ale mama potrzebuje twojej uwagi bardziej niż myślisz.
+            To, co czuje jej ciało i głowa w tych tygodniach, ma swoją nazwę i swoje zasady.
+            Chcę, żebyś je znał. Bo jeśli ty trzymasz, my wszyscy trzymamy.
+          </div>
+        </div>
+      </section>
+
+      <!-- SEKCJE -->
+      <section class="sections-grid">
+
+        <!-- 01 Czym jest połóg -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="card-index">01</span>
+              <span>Czym jest połóg</span>
+            </div>
+            <div class="card-pill">faza&nbsp;~6&nbsp;tygodni</div>
+          </div>
+          <div class="voice-block">
+            <div class="voice-line">
+              <div class="voice-icon">👶</div>
+              <div class="voice-text">
+                Mama przeszła przez coś, co jej ciało musi teraz od początku naprawić – od środka.
+                Połóg to około <span class="highlight-accent">6 tygodni</span>, w których jej organizm
+                wraca powoli do stanu sprzed ciąży.
+              </div>
+            </div>
+            <div class="voice-line">
+              <div class="voice-icon-sm">💬</div>
+              <div class="voice-text">
+                Rany się goją, mleko zaczyna płynąć, hormony skaczą w górę i w dół, a do tego
+                oboje nie śpicie. Mama może być wrażliwsza i drażliwsza niż zwykle –
+                to nie jest jej słabość. To fizjologia.
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 Baby blues / depresja -->
+        <article class="card card-accent-red">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="card-index card-index-red">02</span>
+              <span>„Baby blues" a depresja</span>
+            </div>
+            <div class="card-pill">sygnały&nbsp;alarmowe</div>
+          </div>
+          <div class="voice-block">
+            <div class="voice-line">
+              <div class="voice-icon">👶</div>
+              <div class="voice-text">
+                W pierwszych dniach mama może płakać bez powodu, mieć wahania nastroju, czuć się
+                rozbita. Nazywa się to „baby blues" – i zwykle mija po około dwóch tygodniach.
+              </div>
+            </div>
+            <div class="voice-line">
+              <div class="voice-icon-sm">⚠️</div>
+              <div class="voice-text">
+                Ale jeśli smutek, lęk, poczucie winy, brak radości i problemy ze snem
+                <span class="highlight-danger">trwają dłużej lub się nasilają</span> –
+                to może być depresja poporodowa. Tato, ona nie przejdzie sama.
+                Pomóż mamie sięgnąć po specjalistę.
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 Jak wspierać mamę – card-wide -->
+        <article class="card card-accent-blue card-wide">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="card-index card-index-green">03</span>
+              <span>Jak możesz wspierać mamę</span>
+            </div>
+            <div class="card-pill">tato,&nbsp;działaj</div>
+          </div>
+          <div class="voice-line" style="margin-bottom:12px;">
+            <div class="voice-icon">👶</div>
+            <div class="voice-text">
+              Tato, nie musisz wszystkiego rozwiązać. Musisz być widoczny i konkretny.
+              Oto trzy rzeczy, o które cię proszę:
+            </div>
+          </div>
+          <ul class="action-list">
+            <li class="action-item">
+              <div class="action-bullet">A</div>
+              <div class="action-text">
+                <strong style="color:#e2e8f0;">Uznaj jej uczucia.</strong>
+                Zamiast „inne sobie radzą" powiedz:
+                „Widzę, że jest ci trudno. Jestem przy tobie." To wystarczy na start.
+              </div>
+            </li>
+            <li class="action-item">
+              <div class="action-bullet">B</div>
+              <div class="action-text">
+                <strong style="color:#e2e8f0;">Przejmij to, co możesz przejąć.</strong>
+                Dom, opieka nade mną, posiłki, filtrowanie wizyt gości –
+                mama potrzebuje ciszy i przestrzeni, nie oceny i tłumu.
+              </div>
+            </li>
+            <li class="action-item">
+              <div class="action-bullet">C</div>
+              <div class="action-text">
+                <strong style="color:#e2e8f0;">Zaproponuj pomoc specjalisty.</strong>
+                Spokojnie, bez dramatyzowania – lekarz, psychiatra, psychoterapeuta.
+                Depresja poporodowa to choroba, którą można i warto leczyć.
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 04 Twoje emocje -->
+        <article class="card card-wide">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="card-index">04</span>
+              <span>Twoje emocje w połogu</span>
+            </div>
+            <div class="card-pill">status&nbsp;taty</div>
+          </div>
+          <div class="voice-block">
+            <div class="voice-line">
+              <div class="voice-icon">👶</div>
+              <div class="voice-text">
+                Tato, ty też możesz czuć lęk, bezradność, złość albo przytłoczenie.
+                To normalne. Kiedy mama przechodzi przez trudny połóg,
+                <span class="highlight-accent">cała rodzina to odczuwa</span> – i ja też.
+              </div>
+            </div>
+            <div class="voice-line">
+              <div class="voice-icon-sm">💬</div>
+              <div class="voice-text">
+                Zadbaj o podstawy: śpij, kiedy możesz – choćby w blokach – jedz, wychodź z domu
+                choć na chwilę, rozmawiaj z kimś bliskim.
+                <span class="highlight-green">Wypalony tata nie ma z czego dawać wsparcia.</span>
+                Ani mamie. Ani mnie.
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer-note">
+        <span class="footer-brand">PAPA · partner. nie widz.</span>
+        <span>
+          Ta zakładka nie zastępuje konsultacji medycznej –
+          ma cię uzbroić w czujność i konkrety do działania.
+        </span>
+      </footer>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>
