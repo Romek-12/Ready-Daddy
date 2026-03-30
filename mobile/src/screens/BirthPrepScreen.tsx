@@ -202,12 +202,10 @@ export default function BirthPrepScreen() {
 
       {/* Progress */}
       <View style={s.progressCard}>
-        <View style={s.progressRow}>
-          <Text style={s.progressLabel}>Spakowane łupy</Text>
+        <Text style={s.progressLabel}>Spakowane łupy</Text>
+        <View style={s.progressRight}>
           <Text style={s.progressCount}>{totalChecked}/{totalItems}</Text>
-        </View>
-        <View style={s.progressBar}>
-          <View style={[s.progressFill, { width: totalItems > 0 ? `${(totalChecked / totalItems) * 100}%` : '0%' }]} />
+          <Text style={s.progressCheckLabel}>spakowanych rzeczy</Text>
         </View>
       </View>
 
@@ -305,12 +303,11 @@ const createStyles = (theme: any) => StyleSheet.create({
   title: { fontSize: theme.fontSize.xxl, fontFamily: theme.fonts.title, color: theme.colors.birth, marginTop: theme.spacing.sm },
   sub: { fontSize: theme.fontSize.md, color: theme.colors.textSecondary, marginTop: theme.spacing.xs },
 
-  progressCard: { marginHorizontal: theme.spacing.lg, marginBottom: theme.spacing.xl, backgroundColor: theme.colors.card, borderRadius: theme.borderRadius.xl, padding: theme.spacing.lg, borderWidth: 1, borderColor: theme.colors.cardBorder },
-  progressRow: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: theme.spacing.sm },
-  progressLabel: { fontSize: theme.fontSize.sm, color: theme.colors.textSecondary, fontWeight: theme.fontWeight.medium },
-  progressCount: { fontSize: theme.fontSize.sm, color: theme.colors.birth, fontWeight: theme.fontWeight.bold },
-  progressBar: { height: 6, backgroundColor: theme.colors.surfaceLight, borderRadius: 3, overflow: 'hidden' },
-  progressFill: { height: '100%', backgroundColor: theme.colors.birth, borderRadius: 3 },
+  progressCard: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginHorizontal: theme.spacing.lg, marginBottom: theme.spacing.xl, backgroundColor: theme.colors.birth, borderRadius: theme.borderRadius.xl, paddingHorizontal: theme.spacing.lg, paddingVertical: 24, minHeight: 110 },
+  progressLabel: { fontSize: theme.fontSize.lg, color: 'rgba(255,255,255,0.9)', fontWeight: theme.fontWeight.bold, flex: 1, marginRight: theme.spacing.md },
+  progressRight: { alignItems: 'flex-end' },
+  progressCount: { fontSize: theme.fontSize.xl, fontWeight: theme.fontWeight.bold, color: theme.colors.white },
+  progressCheckLabel: { fontSize: theme.fontSize.xs, color: 'rgba(255,255,255,0.7)', marginTop: 4, fontWeight: theme.fontWeight.medium },
 
   personSection: { marginHorizontal: theme.spacing.lg, marginBottom: theme.spacing.sm },
   personHeader: { backgroundColor: theme.colors.card, borderRadius: theme.borderRadius.lg, padding: theme.spacing.lg, borderWidth: 1, borderColor: theme.colors.cardBorder, borderLeftWidth: 4, flexDirection: 'row', alignItems: 'center' },

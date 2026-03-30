@@ -111,7 +111,7 @@ export default function PostBirthScreen() {
       <View style={st.progressCard}>
         <Text style={st.progressLabel}>Postęp spraw</Text>
         <View style={st.progressRight}>
-          <Text style={st.progressCount}>{totalChecked} / {totalItems}</Text>
+          <Text style={st.progressCount}>{totalChecked}/{totalItems}</Text>
           <Text style={st.progressCheckLabel}>ukończonych</Text>
         </View>
       </View>
