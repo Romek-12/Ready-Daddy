@@ -62,25 +62,27 @@ export default function ActionCardsScreen({ route, navigation }: { route: { para
 
         <ScrollView showsVerticalScrollIndicator={false} style={s.cardScroll}>
           <View style={s.section}>
-            <Text style={s.sectionTitle}>Co może się dziać u niej</Text>
+            <Text style={s.sectionTitle}>Co się naprawdę dzieje</Text>
             {card.herSide.map((item, i) => (
               <View key={i} style={s.listItem}><Text style={s.listBullet}>•</Text><Text style={s.listText}>{item}</Text></View>
             ))}
           </View>
 
           <View style={s.section}>
-            <Text style={s.sectionTitle}>Co robić</Text>
+            <Text style={s.sectionTitle}>Tato, działaj</Text>
             {card.do.map((item, i) => (
               <View key={i} style={[s.listItem, s.doItem]}><Text style={[s.listBullet, s.doBullet]}>✓</Text><Text style={[s.listText, s.doText]}>{item}</Text></View>
             ))}
           </View>
 
-          <View style={s.section}>
-            <Text style={s.sectionTitle}>Czego nie robić</Text>
-            {card.dont.map((item, i) => (
-              <View key={i} style={[s.listItem, s.dontItem]}><Text style={[s.listBullet, s.dontBullet]}>✗</Text><Text style={[s.listText, s.dontText]}>{item}</Text></View>
-            ))}
-          </View>
+          {card.dont.length > 0 && (
+            <View style={s.section}>
+              <Text style={s.sectionTitle}>Czego nie robić</Text>
+              {card.dont.map((item, i) => (
+                <View key={i} style={[s.listItem, s.dontItem]}><Text style={[s.listBullet, s.dontBullet]}>✗</Text><Text style={[s.listText, s.dontText]}>{item}</Text></View>
+              ))}
+            </View>
+          )}
         </ScrollView>
       </View>
     );

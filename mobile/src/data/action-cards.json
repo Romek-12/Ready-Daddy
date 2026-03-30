@@ -1,92 +1,495 @@
 [
   {
-    "id": 73,
-    "week_min": 4,
-    "week_max": 16,
-    "title": "Mama wymiotuje — co robić?",
-    "scenario": "Tato, słyszę jak mama ma mdłości. To przeze mnie — hormon hCG atakuje jej układ trawienny jak alarm. Ona to wytrzymuje. Ty możesz pomóc.",
-    "scientific_explanation": "1. Postaw przy jej łóżku nocnym szklankę wody i suche krakersy/herbatniki ryżowe. 2. Wyeliminuj z kuchni silne zapachy. 3. Kup imbir: herbata imbirowa lub cukierki.",
-    "concrete_action": "Jeśli wymiotuje >3-4 razy dziennie i nie utrzymuje płynów, zadzwoń do lekarza (ryzyko hyperemesis gravidarum).",
-    "icon": "🤢"
+    "id": "1",
+    "weekRange": "Tygodnie 4–12",
+    "emoji": "🤢",
+    "title": "Nudności o 3 w nocy",
+    "herSide": [
+      "Mama budzi się z nudnościami w środku nocy. Biegnie do łazienki.",
+      "hCG – hormon potwierdzający ciążę – podwaja się co 48h i pobudza receptory wymiotne w pniu mózgu mamy.",
+      "Nasilenie mdłości w nocy i na pusty żołądek to fizjologia, nie słabość."
+    ],
+    "do": [
+      "Wstań z nią – Twoja obecność w łazience o 3 w nocy to więcej niż tysiąc słów.",
+      "Postaw przy łóżku: krakersy pszenne, woda z cytryną, wiadro – zanim się kładziesz.",
+      "Powiedz: \"Jestem tu.\" – nie mów \"to minie\"."
+    ],
+    "dont": [
+      "Nie mów \"to minie\" – to nie pomaga."
+    ],
+    "trimester": "I"
   },
   {
-    "id": 75,
-    "week_min": 4,
-    "week_max": 42,
-    "title": "Mama jest rozdrażniona",
-    "scenario": "Tato, to nie jest jej \"zły humor\". To progesteron, kortyzol, brak snu i hormonalny rollercoaster.",
-    "scientific_explanation": "Rozdrażnienie w ciąży jest fizjologiczne, a nie interpersonalne. Wynika ze zmęczenia układu nerwowego.",
-    "concrete_action": "Jedno zdanie, które działa: \"Wiem, że jest ciężko. Jestem tutaj.\" Nie oferuj gotowych rozwiązań. Słuchaj.",
-    "icon": "😤"
+    "id": "2",
+    "weekRange": "Tygodnie 4–5",
+    "emoji": "😰",
+    "title": "Panikuje po pozytywnym teście",
+    "herSide": [
+      "Mama trzyma test w dłoni. Płacze – nie wiadomo, czy ze strachu, czy z radości.",
+      "Ojcowie w chwili potwierdzenia ciąży mają poziom kortyzolu porównywalny z matkami.",
+      "To normalna odpowiedź neurologiczna na nagłą zmianę roli życiowej."
+    ],
+    "do": [
+      "Możesz powiedzieć \"ja też się boję\" – nie musisz udawać spokojnego.",
+      "Usiądźcie razem – nie musicie nic decydować w tej chwili.",
+      "Na dziś jedno zadanie: zadzwoń do lekarza i umów pierwszą wizytę."
+    ],
+    "dont": [],
+    "trimester": "I"
   },
   {
-    "id": 76,
-    "week_min": 4,
-    "week_max": 42,
-    "title": "Boję się o zdrowie dziecka",
-    "scenario": "Strach o mnie jest normalny — jest biologicznie zaprojektowany, żebyś mnie chronił.",
-    "scientific_explanation": "Lęk ojcowski wpływa na jakość relacji z partnerką i poziom Waszego stresu domowego.",
-    "concrete_action": "Unikaj nocnych forów internetowych. Spisuj listę pytań i na wizycie pytaj bezpośrednio lekarza. Szukaj faktów, nie opinii.",
-    "icon": "💔"
+    "id": "3",
+    "weekRange": "Tygodnie 4–42",
+    "emoji": "📵",
+    "title": "Mówi że jesteś nieobecny emocjonalnie",
+    "herSide": [
+      "Mama zarzuca Ci że jesteś obok, ale jej nie słyszysz. Że nie reagujesz.",
+      "Estrogeny i progesteron dosłownie przebudowują obwody limbiczne mamy – jej mózg jest biologicznie wzmocniony do wykrywania sygnałów bezpieczeństwa od Ciebie.",
+      "Gdy ich nie dostaje – alarm."
+    ],
+    "do": [
+      "Odłóż telefon. Spójrz jej w oczy.",
+      "Zapytaj: \"Co teraz czujesz?\" – i słuchaj bez radzenia.",
+      "Jedna konkretna rzecz: usiądźcie wieczorem 10 minut bez ekranów."
+    ],
+    "dont": [],
+    "trimester": "I"
   },
   {
-    "id": 79,
-    "week_min": 4,
-    "week_max": 42,
-    "title": "Wykluczony z ciąży",
-    "scenario": "Jesteś uczestnikiem czegoś, czego nie czujesz fizycznie na ciele. To może powodować zagubienie.",
-    "scientific_explanation": "Paternal exclusion dotyka większości ojców w T1 i T2. Pamiętaj: biologicznie Twoja rola w budowie domu/zabezpieczenia jest w naszym instynkcie.",
-    "concrete_action": "Wyspecjalizuj się w ciąży: logistyka, transport, żywienie, badania. Czytaj do mojego brzucha na głos – to buduje neuro-więź.",
-    "icon": "😰"
+    "id": "4",
+    "weekRange": "Tygodnie 5–14",
+    "emoji": "😢",
+    "title": "Płacze i nie wie dlaczego",
+    "herSide": [
+      "Mama płacze nad reklamą, filmem albo zupełnie bez powodu. Mówi, że sama nie wie czemu.",
+      "Wahania estrogenów wpływają bezpośrednio na poziom serotoniny i dopaminy.",
+      "Płacz jest dosłownie reakcją biochemiczną – nie manipulacją, nie słabością."
+    ],
+    "do": [
+      "Po prostu przytul – nie pytaj \"dlaczego płaczesz\".",
+      "Powiedz: \"Jestem tu. Nie musisz mi nic tłumaczyć.\"",
+      "Daj chusteczki i ciepłą herbatę – i zostań obok."
+    ],
+    "dont": [],
+    "trimester": "I"
   },
   {
-    "id": 81,
-    "week_min": 4,
-    "week_max": 42,
-    "title": "Zdrowie psychiczne mamy",
-    "scenario": "Depresja prenatalna i poporodowa dotyka 10-20% kobiet.",
-    "scientific_explanation": "To najczęstsza komplikacja ciążowa, ukryta pod maską \"to tylko hormony\" – wymaga wczesnej pomocy fachowej.",
-    "concrete_action": "Nie mów: \"Inni mają gorzej\". Zapytaj: \"Jak się czujesz TY, nie jako mama, jako TY?\" Pokaż się jako oparcie dla leczenia.",
-    "icon": "🤰"
+    "id": "5",
+    "weekRange": "Tygodnie 6–16",
+    "emoji": "🙅",
+    "title": "Nie chce być dotykana",
+    "herSide": [
+      "Mama odsuwa się, gdy ją dotykasz. Nie chce seksu ani nawet przytulania. Ty czujesz się odrzucony.",
+      "Wzrost progesteronu i estrogenu powoduje nadwrażliwość skóry i bolesność piersi.",
+      "Dotyk, który normalnie jest przyjemny, teraz może być nieznośny. To reakcja fizjologiczna, nie sygnał odrzucenia Ciebie."
+    ],
+    "do": [
+      "Zapytaj: \"Jak mogę być blisko, żeby Ci nie sprawiać dyskomfortu?\"",
+      "Uszanuj każdą odpowiedź, nawet \"po prostu siedź obok\"."
+    ],
+    "dont": [
+      "Nie bierz tego do siebie – to jej ciało reaguje, nie jej uczucia do Ciebie jako partnera."
+    ],
+    "trimester": "I"
   },
   {
-    "id": 74,
-    "week_min": 20,
-    "week_max": 42,
-    "title": "Mama nie może spać",
-    "scenario": "Moja rosnąca macica, hormony i lęk przed porodem kradną mamie sen.",
-    "scientific_explanation": "Zły sen mamy to wzrost kortyzolu — a kortyzol wpływa na mój rozwijający się mózg.",
-    "concrete_action": "1. Kup poduszkę ciążową kształtu \"C\" lub \"U\". 2. Masaż stóp i łydek po kolacji. 3. Ogranicz płyny po 19:00, żeby rzadziej wstawała do toalety.",
-    "icon": "😴"
+    "id": "6",
+    "weekRange": "Tygodnie 6–16",
+    "emoji": "🥗",
+    "title": "Traci ochotę na jedzenie / dziwne zachcianki",
+    "herSide": [
+      "Mama odmawia jedzenia, które wcześniej lubiła. Albo nagle chce rzeczy, których nigdy nie jadła.",
+      "hCG i progesteron zmieniają zmysł węchu i smaku – dosłownie na poziomie receptorów.",
+      "Awersje pokarmowe chronią dziecko przed toksynami. Zachcianki to sposób na uzupełnienie mikroskładników."
+    ],
+    "do": [
+      "Wyrzuć z lodówki to, co ją teraz odpycha – bez komentarza.",
+      "Miej zawsze w domu: krakersy, owoce, jogurt naturalny.",
+      "Gotuj z myślą o jej aktualnych zachciankach – zmieniają się co kilka tygodni."
+    ],
+    "dont": [],
+    "trimester": "I"
   },
   {
-    "id": 77,
-    "week_min": 36,
-    "week_max": 42,
-    "title": "Idziemy na poród — co teraz?",
-    "scenario": "Zaraz się poznamy. Twoja głowa jest pełna stresu i pytań — musisz przygotować plan logistyczny przed akcją.",
-    "scientific_explanation": "Reguła 5-1-1: skurcze co 5 minut, każdy trwający 1 minutę, przez co najmniej 1 godzinę = czas na szpital.",
-    "concrete_action": "Twoją rolą w szpitalu jest bycie przy niej. Trzymaj za rękę, nie dawaj rad lekarzom, dbaj o jej komfort i wodę.",
-    "icon": "🏥"
+    "id": "7",
+    "weekRange": "Tygodnie 8–12",
+    "emoji": "🧪",
+    "title": "Wyniki badań ją niepokoją",
+    "herSide": [
+      "Przyszły wyniki krwi albo USG i mama zaczyna googlować każde słowo z wydruku.",
+      "Lęk prenatalny dotyka 15–20% kobiet w I trymestrze.",
+      "Jej mózg w ciąży jest biologicznie nastawiony na wykrywanie zagrożeń – to chroni dziecko, ale ją przeciąża."
+    ],
+    "do": [
+      "Usiądźcie razem z wynikami – nie googluj sam osobno.",
+      "Wypisz razem listę pytań do lekarza – to uspokaja bardziej niż szukanie w internecie.",
+      "Powiedz: \"Idziemy do lekarza i zapytamy razem.\""
+    ],
+    "dont": [],
+    "trimester": "I"
   },
   {
-    "id": 80,
-    "week_min": 36,
-    "week_max": 42,
-    "title": "Depresja u taty po porodzie",
-    "scenario": "Depresja poporodowa dotyka nie tylko mamy. Jedno na 10 ojców w pierwszym roku życia dziecka doświadcza tego stanu.",
-    "scientific_explanation": "Objawy to często: drażliwość, wycofanie, nadmierna praca, używki, rzadziej klasyczny smutek.",
-    "concrete_action": "Rozmawiaj! Nie bądź cicho – powiedz mamie albo specjalistom. Istnieją telefony wsparcia dla ojców.",
-    "icon": "🧠"
+    "id": "8",
+    "weekRange": "Tygodnie 6–20",
+    "emoji": "😤",
+    "title": "Kłótnia o nic / irytacja bez powodu",
+    "herSide": [
+      "Mama reaguje nieproporcjonalnie na drobiazg. Kłótnia wybucha z niczego.",
+      "Progesteron obniża próg pobudzenia emocjonalnego.",
+      "Jej mózg jest dosłownie bardziej reaktywny – to nie wybór ani charakter, to neurochemia."
+    ],
+    "do": [
+      "Przeproś za swój ton, nawet jeśli miałeś rację co do faktów."
+    ],
+    "dont": [
+      "Nie eskaluj w trakcie kłótni – powiedz: \"Słyszę Cię. Wróćmy do tego za chwilę.\"",
+      "Nie przypominaj jej, że była wcześniej \"inna\" – teraz jest normalna jak na ciążę."
+    ],
+    "trimester": "I"
   },
   {
-    "id": 78,
-    "week_min": 38,
-    "week_max": 42,
+    "id": "9",
+    "weekRange": "Tydzień 13",
+    "emoji": "💭",
+    "title": "Pytanie bez odpowiedzi",
+    "herSide": [
+      "\"Jakim tatą chcę być – innym niż mój ojciec, czy podobnym?\"",
+      "Nie musisz znać odpowiedzi. Samo zadanie sobie tego pytania zmienia to, jak będziesz traktować swoje dziecko."
+    ],
+    "do": [
+      "Zatrzymaj się na chwilę i pomyśl o tym pytaniu.",
+      "Możesz podzielić się odpowiedzią z mamą – lub zachować ją dla siebie."
+    ],
+    "dont": [],
+    "trimester": "I"
+  },
+  {
+    "id": "10",
+    "weekRange": "Tygodnie 16–24",
+    "emoji": "👶",
+    "title": "Pierwszy raz poczułeś kopnięcie",
+    "herSide": [
+      "Kładziesz rękę na brzuchu i po raz pierwszy czujesz, jak się dziecko rusza.",
+      "To nie jest przypadkowy ruch mięśni – dziecko ćwiczy rozwijające się mięśnie, przygotowując się do narodzin.",
+      "Dziecko słyszy Twój głos od 16. tygodnia i reaguje na niego wzrostem aktywności ruchowej."
+    ],
+    "do": [
+      "Połóż rękę na brzuchu i poczekaj cierpliwie – nie naciskaj, to płoszy dziecko.",
+      "Mów do dziecka po cichu – Twój niski, basowy głos uspokaja je bardziej niż sądzisz.",
+      "Zapamiętaj ten moment – to Wasz pierwszy fizyczny kontakt."
+    ],
+    "dont": [],
+    "trimester": "II"
+  },
+  {
+    "id": "11",
+    "weekRange": "Tygodnie 20–36",
+    "emoji": "😴",
+    "title": "Nie może spać",
+    "herSide": [
+      "Mama kręci się w nocy, wstaje wielokrotnie do toalety, nie może znaleźć wygodnej pozycji.",
+      "Rosnąca macica naciska na pęcherz i przeponę. Relaksyna rozluźnia stawy biodrowe, powodując ból przy leżeniu.",
+      "Zaburzenia snu u ciężarnych są jednym z głównych czynników wpływających na depresję prenatalną."
+    ],
+    "do": [
+      "Kup poduszkę ciążową C-kształt – to nie gadżet, to medyczny ratunek dla jej kręgosłupa.",
+      "Masuj jej plecy 10 minut przed snem – relaksyna sprawia, że masaż przynosi ulgę jak nigdy wcześniej."
+    ],
+    "dont": [
+      "Nie mów \"ja też kiepsko śpiam\" – to nie jest konkurs."
+    ],
+    "trimester": "II"
+  },
+  {
+    "id": "12",
+    "weekRange": "Tydzień 20",
+    "emoji": "🔬",
+    "title": "Wynik USG połówkowego",
+    "herSide": [
+      "Jesteście po USG morfologicznym. Było dużo liczb i pojęć medycznych.",
+      "USG w 20. tygodniu to najważniejsze badanie prenatalne – ocenia budowę 11 głównych układów narządów.",
+      "Twoja reakcja na wyniki wpływa na to, jak mama poczuje się w kolejnych tygodniach."
+    ],
+    "do": [
+      "Przed wyjściem z gabinetu – zadaj jedno pytanie, które mama bała się zadać.",
+      "Po badaniu idźcie razem coś zjeść – celebrujcie dziecko, nawet jeśli byliście przestraszeni."
+    ],
+    "dont": [
+      "Jeśli lekarz wspomniał o \"markerach\" – umówcie się na konsultację zanim zaczniesz googlować."
+    ],
+    "trimester": "II"
+  },
+  {
+    "id": "13",
+    "weekRange": "Tygodnie 24–28",
+    "emoji": "🩺",
+    "title": "Cukrzyca ciążowa (GDM)",
+    "herSide": [
+      "Wyniki krzywej cukrowej wróciły nieprawidłowe. Mama jest przestraszona i czuje, że coś zrobiła źle.",
+      "GDM dotyka 3–9% ciąż i NIE jest wynikiem złej diety – to hormony łożyska blokują insulinę mamy, żeby więcej glukozy trafiało do dziecka.",
+      "Dieta partnera naprawdę wpływa na to, co mama jest w stanie jeść – gdy dostosowujesz swój jadłospis, ona radzi sobie dwa razy lepiej."
+    ],
+    "do": [
+      "Zacznijcie chodzić na 15-minutowy spacer po każdym obiedzie – to dosłownie obniża jej cukier.",
+      "Naucz się czytać etykiety i pomagaj wybierać produkty przy zakupach."
+    ],
+    "dont": [
+      "Wyrzuć ze wspólnej lodówki: słodkie napoje, białe pieczywo, słodycze – bez dramatyzowania."
+    ],
+    "trimester": "II"
+  },
+  {
+    "id": "14",
+    "weekRange": "Tygodnie 24–36",
+    "emoji": "🧹",
+    "title": "Gniazdowanie – obsesyjne sprzątanie",
+    "herSide": [
+      "Mama nagle zaczyna sprzątać wszystko po kolei, przekładać meble, planować pokój dziecięcy z obsesyjną precyzją.",
+      "Gniazdowanie to udokumentowane ewolucyjnie zachowanie adaptacyjne – szczytuje w III trymestrze.",
+      "Jest wynikiem wzrostu oksytocyny i prolaktyny. Dla niej to TERAZ jest pilne – i ma rację."
+    ],
+    "do": [
+      "Dołącz aktywnie: zapytaj co możesz zrobić, żeby jej pomóc.",
+      "Przejmij ciężkie fizycznie zadania bez czekania na prośbę."
+    ],
+    "dont": [
+      "Nie mów \"spokojnie, mamy czas\" – dla niej to TERAZ jest pilne i ma rację."
+    ],
+    "trimester": "II"
+  },
+  {
+    "id": "15",
+    "weekRange": "Tygodnie 14–40",
+    "emoji": "🤰",
+    "title": "Podejrzewasz depresję prenatalną",
+    "herSide": [
+      "Mama jest coraz bardziej wycofana, płacze często, mówi że jest bezużyteczna lub że żałuje ciąży.",
+      "Depresja prenatalna dotyka 10–15% kobiet w ciąży – jest równie poważna jak poporodowa, a znacznie rzadziej diagnozowana.",
+      "Partner jest najważniejszym czynnikiem ochronnym – jego wsparcie zmniejsza ryzyko epizodu depresyjnego nawet o 45%."
+    ],
+    "do": [
+      "Powiedz wprost: \"Widzę, że jest Ci ciężko. Chcę pomóc. Czy możemy razem porozmawiać z lekarzem?\"",
+      "Zadzwoń sam do ginekologa lub psychiatry perinatalnego i zapytaj jak możesz ją wesprzeć."
+    ],
+    "dont": [
+      "Nie bagatelizuj: \"to hormony\" to nie diagnoza."
+    ],
+    "trimester": "II"
+  },
+  {
+    "id": "16",
+    "weekRange": "Tygodnie 8–32",
+    "emoji": "🌡️",
+    "title": "Ty też masz objawy ciążowe (couvade)",
+    "herSide": [
+      "Masz mdłości, przytyłeś, bolą Cię plecy, źle śpisz. Znajomi się śmieją.",
+      "89% przyszłych ojców doświadcza co najmniej 3 objawów ciążowych – syndrom couvade jest naukowo potwierdzony.",
+      "To nie słabość – to Twój mózg przestawia się na ojcostwo."
+    ],
+    "do": [
+      "Mów o tym głośno – normalizacja tego zjawiska zbliża Was jako parę.",
+      "Zadbaj o siebie: sen, ruch, kontakt z przyjaciółmi – Twoje samopoczucie wpływa na całą rodzinę.",
+      "Pamiętaj: te objawy to dowód, że już teraz jesteś zaangażowanym tatą."
+    ],
+    "dont": [],
+    "trimester": "II"
+  },
+  {
+    "id": "17",
+    "weekRange": "Tydzień 22",
+    "emoji": "🙏",
+    "title": "Nie rób nic – po prostu bądź",
+    "herSide": [
+      "Mama jest zmęczona, cicha. Nie o nic nie prosi, ale wyraźnie potrzebuje obecności.",
+      "Sama obecność partnera obniża poziom kortyzolu u kobiet w ciąży – bez jednego słowa."
+    ],
+    "do": [
+      "Usiądź obok. Nie włączaj telefonu.",
+      "Nie pytaj co możesz zrobić. Bądź fizycznie obecny przez 20 minut."
+    ],
+    "dont": [],
+    "trimester": "II"
+  },
+  {
+    "id": "18",
+    "weekRange": "Tygodnie 28–42",
+    "emoji": "😱",
+    "title": "Boi się porodu",
+    "herSide": [
+      "Mama mówi że boi się bólu, powikłań, że coś pójdzie nie tak z nią albo z dzieckiem.",
+      "Tokofobia dotyka 6–10% kobiet; łagodniejszy lęk przed porodem – nawet do 80%.",
+      "Edukacja prenatalna partnera zmniejsza jej lęk bardziej niż leki uspokajające."
+    ],
+    "do": [
+      "Idźcie razem na szkołę rodzenia – to ważniejsze niż zebranie u pracy.",
+      "Zapytaj wprost: \"Czego się najbardziej boisz?\" i wysłuchaj bez przerywania.",
+      "Przeczytajcie razem plan porodu i uzgodnijcie Twoją konkretną rolę na sali."
+    ],
+    "dont": [],
+    "trimester": "III"
+  },
+  {
+    "id": "19",
+    "weekRange": "Tygodnie 36–42",
+    "emoji": "🚗",
+    "title": "Fałszywy alarm porodowy",
+    "herSide": [
+      "Mama mówi że ma skurcze. Jedziecie do szpitala. Okazuje się – skurcze Braxtona-Hicksa. Wracacie do domu.",
+      "Skurcze Braxtona-Hicksa są nieregularne, ustępują przy zmianie pozycji lub piciu wody. Prawdziwe są regularne i nasilają się.",
+      "Lekarze wolą 10 fałszywych alarmów niż jeden prawdziwy przegapiony."
+    ],
+    "do": [
+      "Potraktuj to jako próbę generalną – sprawdziłeś trasę, czas przejazdu, parking.",
+      "Pochwal ją za czujność: \"Dobrze że reagujemy. Tak ma być.\""
+    ],
+    "dont": [
+      "Nie przeklinaj w drodze powrotnej. Nie mów \"wiedziałem\"."
+    ],
+    "trimester": "III"
+  },
+  {
+    "id": "20",
+    "weekRange": "Tygodnie 20–42",
+    "emoji": "⚠️",
+    "title": "Objawy preeklampsji – działaj natychmiast",
+    "herSide": [
+      "Mama skarży się na silny ból głowy, widzi błyski przed oczami albo jej twarz/dłonie nagle bardzo spuchły.",
+      "Preeklampsia dotyka 2–8% ciąż i jest jedną z głównych przyczyn śmiertelności matek i niemowląt.",
+      "Sygnały alarmowe: ból głowy nie ustępujący po paracetamolu, zaburzenia widzenia (błyski, mroczki), ból pod żebrami po prawej, nagły obrzęk twarzy i rąk."
+    ],
+    "do": [
+      "Zadzwoń na izbę przyjęć lub pogotowie TERAZ – nie czekaj do rana.",
+      "Na każdej wizycie kontrolnej od 20. tygodnia – pilnuj, żeby zmierzyli ciśnienie."
+    ],
+    "dont": [
+      "Nie bagatelizuj i nie czekaj – ból głowy + błyski + opuchlizna = natychmiastowa reakcja."
+    ],
+    "trimester": "III"
+  },
+  {
+    "id": "21",
+    "weekRange": "Tygodnie 35–40",
+    "emoji": "📦",
+    "title": "Panika logistyczna przed porodem",
+    "herSide": [
+      "Termin się zbliża. Czujesz, że nie jesteś gotowy. Lista rzeczy do zrobienia rośnie, torba nie spakowana.",
+      "\"Lęk przed gotowością\" u ojców jest jednym z najczęstszych objawów III trymestru.",
+      "Ojcowie ze sprecyzowanym planem działania mają niższy kortyzol podczas porodu i są skuteczniejszym wsparciem."
+    ],
+    "do": [
+      "Dziś: spakuj torbę szpitalną (checklist jest w zakładce Poród).",
+      "Zrób próbny przejazd do szpitala – w nocy, bo prawdopodobnie wtedy pojedziecie.",
+      "Zapisz numer do szpitala w telefonie i powiedz mamie, gdzie jest."
+    ],
+    "dont": [],
+    "trimester": "III"
+  },
+  {
+    "id": "22",
+    "weekRange": "Tygodnie 14–36",
+    "emoji": "💕",
+    "title": "Seks w ciąży – pytanie, którego nie zadajecie",
+    "herSide": [
+      "Nie wiecie, czy seks w ciąży jest bezpieczny. Boicie się zapytać – on też.",
+      "W niepowikłanej ciąży seks jest całkowicie bezpieczny przez cały czas jej trwania.",
+      "Libido zmienia się trymestralnie: I trymestr – spada u obojga, II – wzrasta (najlepszy czas), III – spada szczególnie u kobiet."
+    ],
+    "do": [
+      "Porozmawiajcie wprost – pary z dobrą komunikacją seksualną lepiej przechodzą ciążę i połóg.",
+      "Akceptuj każdy etap – II trymestr to \"złoty czas\" dla intymności.",
+      "Bliskość fizyczna to nie tylko seks: masaż, tulenie, dotyk."
+    ],
+    "dont": [],
+    "trimester": "III"
+  },
+  {
+    "id": "23",
+    "weekRange": "Tydzień 40",
+    "emoji": "🎨",
+    "title": "Twoje ojcostwo – refleksja",
+    "herSide": [
+      "Pary, które dzielą się oczekiwaniami przed urodzeniem dziecka, mają wyższe zadowolenie z relacji w pierwszym roku rodzicielstwa."
+    ],
+    "do": [
+      "Powiedz mamie jedno zdanie: \"Najbardziej cieszę się na to, że...\"",
+      "Podzielcie się swoimi oczekiwaniami i obawami – zanim dziecko przyjdzie na świat."
+    ],
+    "dont": [],
+    "trimester": "III"
+  },
+  {
+    "id": "24",
+    "weekRange": "Pierwsze 24 godziny",
+    "emoji": "👼",
     "title": "Pierwsze godziny po porodzie",
-    "scenario": "Tato, właśnie się urodziłem. Słyszę dźwięki, czuję zimno i ostre światło.",
-    "scientific_explanation": "Słyszę Twój głos od 16. tygodnia i potrafię go rozpoznać. To daje mi ogromne ukojenie.",
-    "concrete_action": "Skin-to-skin z tatą: weź mnie na klatkę piersiową jeśli mama nie może od razu. Poinformuj rodzinę z dużym opóźnieniem.",
-    "icon": "👶"
+    "herSide": [
+      "Dziecko się urodziło. Mama jest wyczerpana. Nie wiesz co ze sobą zrobić.",
+      "Skin-to-skin contact ojca z noworodkiem obniża kortyzol dziecka, stabilizuje temperaturę ciała i tętno.",
+      "Twój głos – znany dziecku od 16. tygodnia – to jeden z pierwszych stabilizatorów jego układu nerwowego poza macicą."
+    ],
+    "do": [
+      "Poproś o skin-to-skin z dzieckiem – to Twoje prawo i jego potrzeba.",
+      "Mów do dziecka spokojnie – Twój głos je rozpoznaje i uspokaja.",
+      "Teraz Twoim jedynym zadaniem jest ochrona mamy i dziecka. Resztą zajmij się później."
+    ],
+    "dont": [],
+    "trimester": "IV"
+  },
+  {
+    "id": "25",
+    "weekRange": "Tygodnie 1–3 po porodzie",
+    "emoji": "😥",
+    "title": "Mama ma baby blues",
+    "herSide": [
+      "Mama płacze kilka razy dziennie. Mówi, że jest niedobrą matką, że nie daje rady, że nie czuje tego co \"powinna czuć\".",
+      "Baby blues dotyka 70–80% kobiet i jest spowodowany gwałtownym spadkiem progesteronu i estrogenu w ciągu 24h od porodu – to największa zmiana hormonalna w życiu kobiety.",
+      "To nie depresja – to fizjologia. Ustępuje zwykle do 2 tygodni. Jeśli nie – wymaga pomocy specjalisty."
+    ],
+    "do": [
+      "Przytul ją i powiedz: \"Widzę że jest Ci ciężko. Jestem tu.\"",
+      "Monitoruj: jeśli po 2 tygodniach nic się nie poprawia – idźcie razem do lekarza.",
+      "Zadbaj o to, żeby mama mogła spać co najmniej 4–5h ciągłego snu – to ważniejsze niż wszystko inne."
+    ],
+    "dont": [
+      "Nie mów \"ale przecież wszystko jest dobrze\" – to nie pomaga."
+    ],
+    "trimester": "IV"
+  },
+  {
+    "id": "26",
+    "weekRange": "Tygodnie 1–8 po porodzie",
+    "emoji": "👤",
+    "title": "Czujesz się nieważny / odsunięty na bok",
+    "herSide": [
+      "Wszyscy pytają o mamę i dziecko. Nikt nie pyta jak Ty sobie radzisz. Czujesz się jak statysta we własnym życiu.",
+      "Depresja poporodowa u ojców dotyka ok. 10% mężczyzn – i jest znacznie rzadziej diagnozowana.",
+      "Ojcowie z depresją wykazują zaburzony kontakt z dzieckiem w pierwszym roku życia – Twoje samopoczucie MA znaczenie."
+    ],
+    "do": [
+      "Powiedz komuś jak się czujesz – przyjacielowi, lekarzowi, psychologowi.",
+      "Zadbaj o jeden nawyk dla siebie: 20 minut ruchu dziennie lub rozmowa z przyjacielem raz w tygodniu.",
+      "Pamiętaj: opieka nad sobą to opieka nad dzieckiem."
+    ],
+    "dont": [],
+    "trimester": "IV"
+  },
+  {
+    "id": "27",
+    "weekRange": "Tygodnie 4–20",
+    "emoji": "💔",
+    "title": "Straciliście dziecko (poronienie)",
+    "herSide": [
+      "Badanie pokazało brak bicia serca. Mama jest zdruzgotana. Ty nie wiesz jak reagować.",
+      "Poronienie dotyka 10–20% ciąż. Mężczyźni doświadczają autentycznej żałoby po utracie dziecka – rzadko dostają na nią przestrzeń.",
+      "Pary, w których ojciec dostaje wsparcie dla siebie, lepiej wychodzą z żałoby razem i mają mniejsze ryzyko rozstania."
+    ],
+    "do": [
+      "Masz prawo płakać. Nie musisz być twardszy niż ona.",
+      "Rozmawiajcie o tym co czujecie – różne tempo żałoby nie oznacza, że jedno z Was czuje więcej."
+    ],
+    "dont": [
+      "Nie mów \"będziemy próbować znowu\" – jeszcze nie teraz. Po prostu bądź."
+    ],
+    "trimester": "IV"
   }
 ]
