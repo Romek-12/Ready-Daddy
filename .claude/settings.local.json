@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find '/c/Users/rrudnicki/OneDrive - Grodno S.A/Dokumenty/Aplikacja' -maxdepth 2 -name *.env* -o -name .env*)",
+      "Bash(grep -c ^s*[)",
+      "Bash(node scripts/export-to-json.js)",
+      "Bash(npm install:*)",
+      "Bash(grep -r \\\\u[0-9a-f] 'c:/Users/rrudnicki/OneDrive - Grodno S.A/Dokumenty/Aplikacja/mobile/src/data/')",
+      "Bash(grep -P '\\\\\\\\\\\\\\\\u[0-9a-f]{4}' \"c:/Users/rrudnicki/OneDrive - Grodno S.A/Dokumenty/Aplikacja/mobile/src/data/\"*)",
+      "Bash(xargs grep:*)",
+      "Bash(python3:*)",
+      "Bash(find 'c:\\\\Users\\\\rrudnicki\\\\OneDrive - Grodno S.A\\\\Dokumenty\\\\Aplikacja\\\\mobile\\\\src' -name *.tsx -o -name *.ts -o -name *.json)",
+      "Bash(grep -r \"Styczeń\\\\|kwiecień\\\\|Maj\\\\|Czerwiec\\\\|Sierpień\\\\|Wrzesień\\\\|Listopad\\\\|Grudzień\" 'c:/Users/rrudnicki/OneDrive - Grodno S.A/Dokumenty/Aplikacja/mobile/src' --include=*.tsx --include=*.ts)",
+      "Bash(du -sh c:/Users/rrudnicki/OneDrive - Grodno S.A/Dokumenty/Aplikacja/*)",
+      "Bash(powershell -Command \"Get-ChildItem -Path ''c:\\\\Users\\\\rrudnicki\\\\OneDrive - Grodno S.A\\\\Dokumenty\\\\Aplikacja'' | ForEach-Object { $size = \\(Get-ChildItem $_.FullName -Recurse -ErrorAction SilentlyContinue | Measure-Object -Property Length -Sum\\).Sum; [PSCustomObject]@{Name=$_.Name; SizeMB=[math]::Round\\($size/1MB,1\\)} } | Sort-Object SizeMB -Descending | Format-Table -AutoSize\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path ''c:\\\\Users\\\\rrudnicki\\\\OneDrive - Grodno S.A\\\\Dokumenty\\\\Aplikacja'' -Recurse -Directory | Where-Object { $_.Name -eq ''__pycache__'' -or $_.Name -eq ''node_modules'' -or $_.Name -eq ''.expo'' } | ForEach-Object { $size = \\(Get-ChildItem $_.FullName -Recurse -ErrorAction SilentlyContinue | Measure-Object -Property Length -Sum\\).Sum; [PSCustomObject]@{Path=$_.FullName; SizeGB=[math]::Round\\($size/1GB,2\\)} } | Sort-Object SizeGB -Descending | Format-Table -AutoSize\")",
+      "Bash(npm run:*)",
+      "Bash(find c:/Dev/mobile/src -type f \\\\\\(-name *.ts -o -name *.tsx \\\\\\))",
+      "Bash(find c:/Dev/backend/src -type f -name *.ts -o -name *.js)",
+      "Bash(npx tsc:*)",
+      "Bash(eas project:info)",
+      "Bash(eas init:*)"
+    ]
+  }
+}

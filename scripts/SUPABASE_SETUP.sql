@@ -31,7 +31,13 @@ CREATE POLICY "profiles: update own"
   USING (auth.uid() = id)
   WITH CHECK (auth.uid() = id);
 
--- 3. Trigger: automatycznie tworzy profil po rejestracji (opcjonalny)
+-- 3. Migracja: nowe kolumny porównania rozmiaru płodu
+-- -----------------------------------------------------------------------------
+ALTER TABLE public.weeks
+  ADD COLUMN IF NOT EXISTS fetus_size_comparison_animal TEXT DEFAULT NULL,
+  ADD COLUMN IF NOT EXISTS fetus_size_comparison_sweet  TEXT DEFAULT NULL;
+
+-- 4. Trigger: automatycznie tworzy profil po rejestracji (opcjonalny)
 --    Jeśli nie używasz trigera, profil jest tworzony przez aplikację w register().
 -- -----------------------------------------------------------------------------
 -- CREATE OR REPLACE FUNCTION public.handle_new_user()
