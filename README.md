@@ -1,123 +1,138 @@
-# HEJ PAPA - Tata W Akcji
+# HEJ PAPA — Ready Daddy
 
-Educational application for expectant fathers, partners, and co-parents to prepare for and understand pregnancy, birth, and the postpartum period.
+Educational mobile app for expectant fathers, partners, and co-parents. Polish-language. Week-by-week pregnancy guide plus postpartum support through the first year.
 
-**Available in Polish** | "Hej Papa" (Hey Papa) | "Tata W Akcji" (Dad In Action)
+**Status:** in development · **Version:** 1.0.0 · **Slug:** `ready-daddy` · **Bundle:** `com.readydaddy.mobile`
+
+---
 
 ## Features
 
-### Comprehensive Pregnancy Guide
-- **Week-by-week tracking** - Follow fetal development across all 40+ weeks
-- **Partner insights** - Understand what your partner experiences each week
-- **Father tips** - Practical advice specific to dads' needs and roles
-- **Trimester organization** - Structure information by pregnancy phase
+### Pregnancy tracking
+- Week-by-week fetal development (weeks 1–42), with bundled illustrations and real measurements (length/weight from clinical CSV)
+- Trimester-aware UI: I/II/III trimesters drive colors and module visibility
+- Partner / father / baby tabs per week
+- "What's happening now" — week-targeted action cards
 
-### Dad Module - Emotional Support
-- **Emotions exploration** - 6 common emotional states during and after pregnancy
-- **Statistics** - Clinical data on postpartum depression in fathers
-- **Internal conflicts** - Address common dilemmas and contradictions
-- **Warning signs** - Identify symptoms requiring professional help
-- **Relationship guidance** - Intimacy, communication, and partnership
-- **Professional resources** - When and where to seek help
+### Dad-focused content
+- Dad Module: emotions, internal conflicts, warning signs, relationship guidance, professional resources
+- Postpartum (4th trimester) and First Year (months 1–12) modules
+- Birth-prep module + hospital bag checklist
+- "Co czujesz?" emotional check-in
 
-### Medical Information
-- **Checkup calendar** - Expected medical appointments by trimester
-- **Birth preparation** - What to expect and how to support your partner
-- **Hospital bag checklist** - Comprehensive packing guide
-- **Fourth trimester guide** - First 12 weeks postpartum
+### Planning & tracking
+- Cost calculator + shopping checklist (categories: dziecko, mama, tata)
+- Checkup calendar (visits + reminders, expo-calendar integration)
+- Pregnancy safety guide ("Co jeść / unikać")
+- Journal (entries with optional photos, calendar view)
+- Name draw (Wybór imienia — random pick from mama/tata pools, save as baby name)
+- Reorderable home tiles (`ModuleOrderScreen`)
+- Gamification: badges + level progression
 
-### Planning Tools
-- **Cost calculator** - Track and estimate pregnancy-related expenses
-- **Shopping list** - Complete maternity and newborn shopping checklist
-- **Budget breakdown** - Costs organized by trimester and category
+### Auth & profile
+- Supabase email/password + Google sign-in + Facebook sign-in
+- Profile setup flow on first launch
+
+---
 
 ## Tech Stack
 
-- **Framework:** React Native 0.81 with Expo 54
-- **Language:** TypeScript 5.8
-- **Auth & Database:** Supabase (PostgreSQL + Auth)
-- **Navigation:** React Navigation 7.x
-- **State Management:** React Context API + TanStack React Query
-- **Forms:** React Hook Form + Zod validation
-- **Styling:** React Native StyleSheet with custom theme system (light/dark)
+| Layer | Library / Version |
+|---|---|
+| Runtime | React Native **0.83.6** + Expo **55** |
+| Language | TypeScript **5.x** (strict) |
+| Navigation | `@react-navigation/native` 7.x + native-stack + bottom-tabs |
+| Server state | `@tanstack/react-query` 5.x |
+| Auth & DB | Supabase (`@supabase/supabase-js` 2.x) |
+| Forms | `react-hook-form` + Zod resolvers |
+| Animation | `react-native-reanimated` 4.x + `react-native-gesture-handler` |
+| Drag & drop | `react-native-reorderable-list` 0.18 |
+| Effects | `expo-blur` (glass surfaces, behind feature flag) + `expo-linear-gradient` |
+| Icons | Material Symbols Rounded (variable font, bundled TTF) |
+| Fonts | ClimateCrisis (display), Space Grotesk (UI), JetBrains Mono (numeric) |
+| Notifications | `expo-notifications` (local) |
+| Storage | `@react-native-async-storage/async-storage` |
+| Testing | Jest (`jest-expo`) + `@testing-library/react-native` |
+
+Auth providers: Google (`@react-native-google-signin/google-signin`), Facebook (`react-native-fbsdk-next`).
+
+---
 
 ## Project Structure
 
 ```
 /
-├── mobile/                     # React Native/Expo app (separate git repo for EAS)
+├── mobile/                     # React Native/Expo app (nested .git for EAS)
+│   ├── App.tsx                 # entry: providers + AppNavigator
+│   ├── app.json                # Expo config
 │   ├── src/
-│   │   ├── components/        # Reusable UI components
-│   │   ├── context/           # Auth & Theme context
-│   │   ├── screens/           # App screens
-│   │   ├── services/          # API layer (bundled JSON data)
-│   │   ├── hooks/             # Custom React hooks
-│   │   ├── data/              # Bundled JSON content files
-│   │   ├── config/            # Environment config
-│   │   ├── lib/               # Supabase client & validation
-│   │   ├── theme/             # Design system & tokens
-│   │   └── types/             # TypeScript type definitions
-│   ├── App.tsx                # Entry point
-│   ├── app.json               # Expo configuration
-│   └── package.json
-│
-├── scripts/                   # Utility scripts
-│   ├── generate-weekly-fetus-svgs.py  # Generate SVG TypeScript file
-│   ├── export-to-json.js             # Export DB data to JSON (legacy)
-│   └── SUPABASE_SETUP.sql            # Supabase schema reference
-│
-├── fetus_weekly_realistic_svgs/  # Weekly fetus SVG/PNG assets
-└── icon.svg                      # App icon source
+│   │   ├── components/         # reusable components (+ ui/ for design-system primitives)
+│   │   ├── context/            # AuthContext, ThemeContext
+│   │   ├── screens/            # one file per route
+│   │   ├── navigation/         # AppNavigator (auth ⇄ main stack switch)
+│   │   ├── services/           # api.ts + notifications/, gamification/, calendar/, journal/
+│   │   ├── hooks/              # useModuleOrder, useNameDrawStorage, useBadges, useGlassFeatureFlag, ...
+│   │   ├── data/               # bundled JSON content (weeks, dad-module, checkups, ...)
+│   │   ├── theme/              # design tokens (dark + light)
+│   │   ├── lib/                # Supabase client + Zod validation schemas
+│   │   └── types/              # shared TypeScript types
+│   └── assets/                 # fonts, fetus PNGs, app icons
+├── scripts/                    # generate-weekly-fetus-svgs.py, SUPABASE_SETUP.sql, ...
+└── docs/superpowers/
+    ├── specs/                  # design specs (one per feature)
+    └── plans/                  # implementation plans (one per feature)
 ```
 
+The root `package.json` is essentially empty. All work happens in `mobile/`.
+
+---
+
+## Architecture Highlights
+
+- **Static content is bundled.** Educational copy lives in `mobile/src/data/*.json` — no network call needed to read content. App works offline for reading. `services/api.ts` is the canonical data boundary.
+- **Server state in Supabase.** Auth, profiles, journal, badges. Accessed via `api.ts`, cached by React Query.
+- **Provider tree:** `QueryClientProvider → ThemeProvider → AuthProvider → AppNavigator`. No Redux/Zustand.
+- **Theme:** light/dark via `ThemeContext`. All components read `theme.colors.*`, `theme.spacing.*`, etc. — no hardcoded values.
+- **Glass UI feature flag** (`useGlassFeatureFlag`): `BlurView`-based surfaces can fall back to fake-glass (rgba + gradient border) per-build or per-user.
+
+---
+
 ## Quick Start
-
-### Prerequisites
-- Node.js 16+
-- npm or yarn
-- Expo Go app (for mobile development)
-
-### Setup
 
 ```bash
 cd mobile
 npm install
-npm start             # Start Expo development server
-```
-
-**Platforms:**
-```bash
-npm run web           # Web browser
-npm run android       # Android device/emulator
+npm start             # dev server (npx expo start)
+npm run android       # Expo Go on Android
 npm run ios           # iOS simulator
+npm run web           # web preview
+npm run typecheck     # tsc --noEmit
+npm test              # jest
+npm run build:apk     # eas build -p android --profile preview
 ```
 
-### Environment Variables
+### Environment
 
-Create `mobile/.env.local` from the template:
-```bash
-cp mobile/.env.example mobile/.env.local
-```
+Create `mobile/.env.local` from `mobile/.env.example`:
 
-Required variables:
-- `EXPO_PUBLIC_SUPABASE_URL` - Supabase project URL
-- `EXPO_PUBLIC_SUPABASE_ANON_KEY` - Supabase anon/public key
+- `EXPO_PUBLIC_SUPABASE_URL`
+- `EXPO_PUBLIC_SUPABASE_ANON_KEY`
+- `EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID`
 
-## Architecture
+### CI
 
-The app uses **Supabase** for authentication and user profiles, with all educational content **bundled as JSON files** in the app for offline access. Data was originally managed in SQLite and exported via `scripts/export-to-json.js`.
-
-## Mobile App Store Builds
-
-Uses Expo EAS Build:
-- **iOS App Store** - `eas build --platform ios`
-- **Google Play** - `eas build --platform android`
-
-## License
-
-Educational use - Contact for licensing details
+`.github/workflows/ci.yml` runs `npx tsc --noEmit` and `npm test` on push/PR to `main`. APK build workflows live in `mobile/.github/workflows/` and trigger on `master` of the nested repo.
 
 ---
 
-**Status:** In development
-**Version:** 1.0.0
+## Mobile sub-repo gotchas
+
+- `mobile/.git/` is a separate repository (so EAS can build from it standalone). `git status` from the root will not show changes inside `mobile/` — `cd mobile` before committing mobile work.
+- `mobile/.worktrees/` and root `.worktrees/` are both gitignored.
+- Jest config excludes `.worktrees/` from test discovery.
+
+---
+
+## License
+
+Educational use — contact for licensing.
